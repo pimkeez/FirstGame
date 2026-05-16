@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    private Transform playerTransform;
     public float boundX = 0.15f;
+    private Transform playerTransform;
+    private bool facingRight;
    
     void Awake()
     {

@@ -71,21 +71,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void LoadDialogue(string filename)
+    public void SetVisualNovelJSONFile(TextAsset jsonFile)
     {
-        string resourceName = Path.GetFileNameWithoutExtension(filename);
-        TextAsset jsonTextAsset = Resources.Load<TextAsset>(resourceName); // **FIX THIS TO BE FIT TO YOU
-       
-        if (jsonTextAsset != null)
-        {
-            dialogueDataWrapper = JsonUtility.FromJson<DialogueDataWrapper>(jsonTextAsset.text);
-            currentEntry = dialogueDataWrapper.dialogueEntries[0]; // Start with the first entry
-            dialogueActive = true;
-        }
-        else
-        {
-            Debug.LogError("JSON file not found: " + filename);
-        }
+        dialogueDataWrapper = JsonUtility.FromJson<DialogueDataWrapper>(jsonFile.text);
+        print(dialogueDataWrapper.dialogueEntries.Length);
+        currentEntry = dialogueDataWrapper.dialogueEntries[0];
+        dialogueActive = true;
     }
 
     void OnNext()

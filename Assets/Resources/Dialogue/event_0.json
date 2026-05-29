@@ -1,0 +1,20 @@
+{
+    "textEntries": [
+        {
+            "speaker": "Virgo",
+            "portrait": "HeadshotVirgoCurious",
+            "text": "(It's a bunch of papers...? What are these drawings?)",
+            "id": "line1"
+        },
+        {
+            "speaker": "Virgo",
+            "portrait": "HeadshotVirgoShocked",
+            "text": "(These kind of look like... ASTA...)"
+        },
+        {
+            "speaker": "Virgo",
+            "portrait": "VirgoEyes",
+            "text": "(These must be the other patrol robot models.)",
+        }
+    ]
+}

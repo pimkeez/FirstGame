@@ -27,8 +27,8 @@ public class GameProgression : MonoBehaviour
 
     public void ShowDialogue(TextAsset dialogue)
     {
-        dialogueManager.SetVisualNovelJSONFile(dialogue);
         dialogueManager.enabled = true;
         dialogueManager.gameObject.SetActive(true);
+        dialogueManager.SetVisualNovelJSONFile(dialogue);
     }
 }

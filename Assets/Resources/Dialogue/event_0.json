@@ -1,10 +1,9 @@
 {
-    "dialogueDataWrapper": [
+    "dialogueEntries": [
         {
             "speaker": "Ayla",
             "portrait": "AylaPJTalk",
             "text": "I shouldn’t play this right now."
-
         },
         {
             "speaker": "Ayla",

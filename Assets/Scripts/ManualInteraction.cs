@@ -10,6 +10,8 @@ public class ManualInteraction : MonoBehaviour
 
     public void Interact()
     {
+        if (!GameData.dialogueActive) {
         GameProgression.GameProgressionInstance.ShowDialogue(interactionDialogues[dialoguesIndex]);
+        }
     }
 }

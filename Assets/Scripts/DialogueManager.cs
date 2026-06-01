@@ -131,30 +131,49 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator FadePortrait(Sprite newPortrait, float duration)
     {
-        if ((portraitImage == null && newPortrait == null) || (portraitImage.sprite == newPortrait))
+        if ((portraitImage.sprite == null && newPortrait == null) || (portraitImage.sprite == newPortrait))
         {
             yield break; 
         }
 
         float elapsed = 0f;
-        if (portraitImage != null) 
+        if (portraitImage != null && portraitImage.sprite != null) 
         {
             while (elapsed < duration)
             {
                 float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
                 portraitImage.color = new Color(1f, 1f, 1f, alpha);
                 elapsed += Time.deltaTime;
-            }
 
-            portraitImage.sprite = newPortrait;
-
-            while (elapsed < duration)
-            {
-                float alpha = Mathf.Lerp(0f, 1f, duration / elapsed);
-                portraitImage.color = new Color(1f, 1f, 1f, alpha);
-                elapsed += Time.deltaTime;
+                yield return null;
             }
         }
+
+        if (portraitImage != null)
+        {
+        portraitImage.color = new Color(1f, 1f, 1f, 0f);
+        }
+
+        portraitImage.sprite = newPortrait;
+        elapsed = 0f; 
+
+        if (portraitImage != null && portraitImage.sprite != null)
+         {
+        while (elapsed < duration)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+            portraitImage.color = new Color(1f, 1f, 1f, alpha);
+
+            elapsed += Time.deltaTime;
+            yield return null; // Pause for a frame
+        }
+        }
+
+         // Ensure it hits exactly 1 at the end
+        if (portraitImage != null)
+        {   
+           portraitImage.color = new Color(1f, 1f, 1f, 1f);
+        }      
     }
 
     public void StartDialogue() 

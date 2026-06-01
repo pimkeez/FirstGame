@@ -1,0 +1,9 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "It's a shelf full of old books you read years ago."
+
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You open the sketchbook."
+        },
+        {
+            "speaker": "",
+            "text": "It lacks complete drawings. Just silly doodles of cats."
+        }
+    ]
+}

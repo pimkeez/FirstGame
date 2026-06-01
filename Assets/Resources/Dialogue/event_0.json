@@ -3,18 +3,13 @@
         {
             "speaker": "Ayla",
             "portrait": "AylaPJTalk",
-            "text": "I shouldn’t play this right now."
+            "text": "Mom told me to get ready for school."
 
         },
         {
             "speaker": "Ayla",
             "portrait": "AylaPJTalk",
-            "text": "Blahblahblah, I’m a patrol robot, I’m here to protect the city, blahblahblah."
-        },
-        {
-            "speaker": "Ayla",
-            "portrait": "AylaPJTalk",
-            "text": "I am alone patrol robot, I have no friends, blahblahblah."
+            "text": "I shouldn’t play this right now."
         }
     ]
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +10,6 @@ public class Camera : MonoBehaviour
     private static GameObject otherObj;
     private float input;
     private Transform playerTransform;
-    
     
    
     void Awake()
@@ -45,5 +45,10 @@ public class Camera : MonoBehaviour
         // }
         
         transform.position += new Vector3(delta.x, 0, 0);
+    }
+
+    public Vector2 ScreenToWorldPoint(Vector3 mousePosition)
+    {
+        throw new NotImplementedException();
     }
 }

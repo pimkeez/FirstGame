@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameProgression : MonoBehaviour
 {
     public static GameProgression GameProgressionInstance;
+    public static string currentScene;
     public DialogueManager dialogueManager; 
 
     void Awake()
@@ -31,5 +32,11 @@ public class GameProgression : MonoBehaviour
         dialogueManager.gameObject.SetActive(true);
         dialogueManager.SetVisualNovelJSONFile(dialogue);
         
+    }
+
+    public void changeScene(string sceneName)
+    {
+        currentScene = sceneName;
+        // UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9292000ac45ec3b46a072173271c4df2
+guid: b775a4a9ec999744187c9b0c81938ab3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4725528894824212767
-    second: Guitar (1)_0
+      213: -3007706496689592259
+    second: Guitar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guitar (1)_0
+      name: Guitar_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 53
-        width: 124
-        height: 339
+        x: 47
+        y: 47
+        width: 136
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e69820d18c8b6eb0800000000000000
-      internalID: -4725528894824212767
+      spriteID: d38ae2470ea7246d0800000000000000
+      internalID: -3007706496689592259
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guitar (1)_0: -4725528894824212767
+      Guitar_0: -3007706496689592259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

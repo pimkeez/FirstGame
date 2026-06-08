@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private AnimatorOverrideController casualOverride;
     private AnimationClip casualIdol;
     private AnimationClip casualWalk;
+
+    private Vector3 schoolHallwayDoor; 
+    private Vector3 bedroomDoor; 
+    private Vector3 offset;
 
     void Awake()
     {
@@ -32,8 +38,13 @@ public class PlayerMovement : MonoBehaviour
             casualOverride["_PJplayerIdol"] = casualIdol; // replace "Idle" with the original clip name from your controller
             casualOverride["_PJplayerWalk"] = casualWalk; // replace "Walk" with the original clip name from your controller
         }
+
+        schoolHallwayDoor = GameObject.Find("SchoolHallwayDoor").transform.position;
+        bedroomDoor = GameObject.Find("BedroomDoor").transform.position;
+
+        offset.x = 10; 
     }
-    private UnityEngine.Vector2 movement; 
+    private Vector2 movement; 
     public bool isLeftFacing = true; 
     public float input; 
 
@@ -65,36 +76,53 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
     }
 
+    // SceneMovement for walking into door
     public void SceneMovement(Vector2 offset, string locationName)
     {
         
         _transform.position += (Vector3)offset;
-        GameProgressionInstance.changeScene(locationName);
+        GameProgressionInstance.ChangeScene(locationName);
+        AnimationChange();
+    }
 
-        if (_animator == null)
-            return;
+    // SceneMovement for pressing on things 
+    public void SceneMovementClick(string locationName) {
+        if (locationName == "SchoolHallway") {
+            // float yOffset = schoolHallwayDoor.y - movement.y;
+            Vector3 schoolOffset = new Vector3(0f,2f,0f);
+            _transform.position = schoolHallwayDoor - offset - schoolOffset; 
+        }
+        if (locationName == "Bedroom") {
+            _transform.position = bedroomDoor + offset; 
+        }
+        AnimationChange();
+    }
 
-        if (GameProgression.currentScene == "SchoolHallway")
+    public void AnimationChange() {
+    if (_animator == null)
+        return;
+
+    if (GameProgression.currentScene == "SchoolHallway")
+    {
+        if (casualOverride != null)
         {
-            if (casualOverride != null)
-            {
-                Debug.Log("Switching to casual animator controller for SchoolHallway");
-                _animator.runtimeAnimatorController = casualOverride;
-                _animator.Rebind();
-                _animator.SetBool("isRunning", false);
-                _animator.Play("_playerIdol", 0, 0f); // make sure this state exists in the controller
-            }
+            Debug.Log("Switching to casual animator controller for SchoolHallway");
+            _animator.runtimeAnimatorController = casualOverride;
+            _animator.Rebind();
+            _animator.SetBool("isRunning", false);
+            _animator.Play("_playerIdol", 0, 0f); // make sure this state exists in the controller
         }
-        else
+    }
+    else
+    {
+        if (originalController != null)
         {
-            if (originalController != null)
-            {
-                _animator.runtimeAnimatorController = originalController;
-                _animator.Rebind();
-                _animator.SetBool("isRunning", false);
-                _animator.Play("_playerIdol", 0, 0f);
-            }
+            _animator.runtimeAnimatorController = originalController;
+            _animator.Rebind();
+            _animator.SetBool("isRunning", false);
+            _animator.Play("_playerIdol", 0, 0f);
         }
+    }
     }
 
     public void FlipSprite()

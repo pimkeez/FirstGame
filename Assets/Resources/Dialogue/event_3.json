@@ -1,0 +1,23 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "Mom told me to get ready for school.",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "",
+            "text": "Mom told me to get ready for school.",
+            "portrait": "AylaPJTalk",
+            "options": [
+                {
+                    "optionText": "Get ready",
+                    "nextScene": "SchoolHallway"
+                },
+                {
+                    "optionText": "Keep exploring"
+                }
+            ]
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9292000ac45ec3b46a072173271c4df2
+guid: 74df999fc1820b446ae51f063c4075f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4725528894824212767
-    second: Guitar (1)_0
+      213: 3410074547627893143
+    second: BookshelfGlow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guitar (1)_0
+      name: BookshelfGlow_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 53
-        width: 124
-        height: 339
+        x: 41
+        y: 30
+        width: 311
+        height: 423
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e69820d18c8b6eb0800000000000000
-      internalID: -4725528894824212767
+      spriteID: 79126f4dbb4035f20800000000000000
+      internalID: 3410074547627893143
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guitar (1)_0: -4725528894824212767
+      BookshelfGlow_0: 3410074547627893143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

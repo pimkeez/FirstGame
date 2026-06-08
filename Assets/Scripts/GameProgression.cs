@@ -34,7 +34,7 @@ public class GameProgression : MonoBehaviour
         
     }
 
-    public void changeScene(string sceneName)
+    public void ChangeScene(string sceneName)
     {
         currentScene = sceneName;
         // UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);

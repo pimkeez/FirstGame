@@ -12,6 +12,7 @@ public class Click : MonoBehaviour
     [SerializeField] private List<TextAsset> interactionDialogues;
     public bool beenClicked = false;
     UnityEngine.Camera mainCamera;
+    // PUT COLLIDERS ON ALL THE OBJECTS
     
     
     void Start()

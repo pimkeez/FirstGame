@@ -1,4 +1,6 @@
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OptionManager : MonoBehaviour
@@ -13,6 +15,7 @@ public class OptionManager : MonoBehaviour
     private DialogueManager dialogueManagerInstance; // reference to the DialogueManager script
     private GameProgression gameProgressionInstance; // reference to the GameProgression script
     private PlayerMovement playerMovementInstance; 
+    [SerializeField] private BlackScreen blackScreenInstance; 
     private int dialogueIndex; // to track the current dialogue index for options
     
     
@@ -38,7 +41,16 @@ public class OptionManager : MonoBehaviour
         dialogueManagerInstance = GameObject.Find("Canvas/DialogueBox").GetComponent<DialogueManager>();
         gameProgressionInstance = GameProgression.GameProgressionInstance;
         playerMovementInstance = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>(); 
+
         optionManagerInstance.gameObject.SetActive(false);
+
+        // ensure blackScreenInstance is assigned (allow inspector override)
+        if (blackScreenInstance == null)
+        {
+            var bsObj = GameObject.Find("Canvas/BlackScreen");
+            if (bsObj != null)
+                blackScreenInstance = bsObj.GetComponent<BlackScreen>();
+        }
     }
 
     // Update is called once per frame
@@ -80,10 +92,8 @@ public class OptionManager : MonoBehaviour
         if (selectedOption.nextScene != null)
         {
             Debug.Log("Changing scenes...");
-            gameProgressionInstance.ChangeScene(selectedOption.nextScene);
-            playerMovementInstance.SceneMovementClick(selectedOption.nextScene);
-            dialogueManagerInstance.EndDialogue();
-            CloseOptions();
+            StartCoroutine(gameProgressionInstance.ChangeScene(selectedOption.nextScene));
+        
             return;
         }
         
@@ -100,9 +110,11 @@ public class OptionManager : MonoBehaviour
 
     public void CloseOptions()
     {
-        optionManagerInstance.gameObject.SetActive(false);
-        dialogueManagerInstance.enabled = true; 
         GameData.dialogueOptionActive = false;
+        optionManagerInstance.gameObject.SetActive(false);
+        Debug.Log("closing options...");
+        // i think this isn't running
+        
         // add more
     }
 }

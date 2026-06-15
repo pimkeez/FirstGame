@@ -1,9 +1,9 @@
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private static WaitForSeconds waitForSeconds0_2 = new WaitForSeconds(0.2f);
     [SerializeField] private float speed = 5f;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 schoolHallwayDoor; 
     private Vector3 bedroomDoor; 
     private Vector3 offset;
+
 
     void Awake()
     {
@@ -57,23 +58,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        input = Input.GetAxisRaw("Horizontal");
-        movement.x = input * speed * Time.deltaTime; 
-        transform.Translate(movement);
-        if (input != 0)
-        {
-            _animator.SetBool("isRunning", true); 
+        if (!GameData.dialogueActive && !GameData.dialogueOptionActive) {
+            input = Input.GetAxisRaw("Horizontal");
+            movement.x = input * speed * Time.deltaTime; 
+            transform.Translate(movement);
+            if (input != 0)
+            {
+                _animator.SetBool("isRunning", true); 
+            }
+            else {_animator.SetBool("isRunning", false);}
+            if (input <= 0)
+            {
+                isLeftFacing = true;
+            }
+            else
+            {
+                isLeftFacing = false;
+            }
+            FlipSprite();
         }
-        else {_animator.SetBool("isRunning", false);}
-        if (input <= 0)
-        {
-            isLeftFacing = true;
-        }
-        else
-        {
-            isLeftFacing = false;
-        }
-        FlipSprite();
     }
 
     // SceneMovement for walking into door
@@ -81,7 +84,11 @@ public class PlayerMovement : MonoBehaviour
     {
         
         _transform.position += (Vector3)offset;
-        GameProgressionInstance.ChangeScene(locationName);
+        // Ensure the coroutine is started on the GameProgression instance
+        if (GameProgressionInstance != null)
+        {
+            GameProgressionInstance.StartCoroutine(GameProgressionInstance.ChangeScene(locationName));
+        }
         AnimationChange();
     }
 
@@ -89,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
     public void SceneMovementClick(string locationName) {
         if (locationName == "SchoolHallway") {
             // float yOffset = schoolHallwayDoor.y - movement.y;
+            
             Vector3 schoolOffset = new Vector3(0f,2f,0f);
             _transform.position = schoolHallwayDoor - offset - schoolOffset; 
         }
@@ -96,6 +104,10 @@ public class PlayerMovement : MonoBehaviour
             _transform.position = bedroomDoor + offset; 
         }
         AnimationChange();
+    }
+
+    public void TimeTransition(string locationName) {
+        SceneMovementClick(locationName);
     }
 
     public void AnimationChange() {

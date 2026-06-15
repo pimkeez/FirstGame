@@ -95,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Loading dialogue JSON file: " + jsonFile.name);
         dialogueDataWrapper = JsonUtility.FromJson<DialogueDataWrapper>(jsonFile.text);
         GameData.dialogueActive = true;
+        GameData.dialogueOptionActive = false;
         OnNext();
     }
 
@@ -188,49 +189,44 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator FadePortrait(Sprite newPortrait, float duration)
     {
-        if ((portraitImage.sprite == null && newPortrait == null) || (portraitImage.sprite == newPortrait))
+        if (portraitImage == null)
+            yield break;
+
+        if (portraitImage.sprite == newPortrait)
         {
-            yield break; 
+            portraitImage.sprite = newPortrait;
+            portraitImage.color = new Color(1f, 1f, 1f, newPortrait == null ? 0f : 1f);
+            yield break;
         }
 
         float elapsed = 0f;
-        if (portraitImage != null && portraitImage.sprite != null) 
+        if (portraitImage.sprite != null)
         {
             while (elapsed < duration)
             {
                 float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
                 portraitImage.color = new Color(1f, 1f, 1f, alpha);
                 elapsed += Time.deltaTime;
-
                 yield return null;
             }
         }
 
-        if (portraitImage != null)
-        {
         portraitImage.color = new Color(1f, 1f, 1f, 0f);
-        }
-
         portraitImage.sprite = newPortrait;
-        elapsed = 0f; 
+        elapsed = 0f;
 
-        if (portraitImage != null && portraitImage.sprite != null)
-         {
-        while (elapsed < duration)
+        if (newPortrait != null)
         {
-            float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
-            portraitImage.color = new Color(1f, 1f, 1f, alpha);
-
-            elapsed += Time.deltaTime;
-            yield return null; // Pause for a frame
+            while (elapsed < duration)
+            {
+                float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+                portraitImage.color = new Color(1f, 1f, 1f, alpha);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
         }
-        }
 
-         // Ensure it hits exactly 1 at the end
-        if (portraitImage != null)
-        {   
-           portraitImage.color = new Color(1f, 1f, 1f, 1f);
-        }      
+        portraitImage.color = new Color(1f, 1f, 1f, newPortrait == null ? 0f : 1f);
     }
 
     public void StartDialogue() 
@@ -242,13 +238,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (portraitImage == null)
         {
-            return; 
+            return;
         }
+
         if (string.IsNullOrEmpty(currentEntry.portrait))
         {
             StartCoroutine(FadePortrait(null, 0.5f));
             return;
         }
+
         Sprite newPortrait = Resources.Load<Sprite>($"Art/{currentEntry.speaker}/{currentEntry.portrait}");
         StartCoroutine(FadePortrait(newPortrait, 0.5f));
     }
@@ -259,14 +257,18 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(typingCoroutine);
          }
         GameData.dialogueActive = false;
-        GameData.dialogueOptionActive = false;
         currentEntry = null;
         dialogueIndex = 0;
         dialogueTMP.text = "";
         speakerTMP.text = "";
-        portraitImage = null;
         isTyping = false; // these two by me so WATCH OUT BUDDYY
         skipTyping = false;
+
+        if (portraitImage != null)
+        {
+            portraitImage.sprite = null;
+            portraitImage.color = new Color(1f, 1f, 1f, 0f);
+        }
 
         gameObject.SetActive(false);
         // go reference hahckathon code 

@@ -15,10 +15,15 @@ public class BlackScreen : MonoBehaviour
         optionManagerInstance = GameObject.Find("Canvas/DialogueBox/OptionManager").GetComponent<OptionManager>();
     }
 
-    void Start()
+    public void Update()
     {
-        gameObject.SetActive(false);
-    }
+        if (GameData.introductionOver) {
+            if (GameData.transitionActive) {
+                return;
+            }
+            else {gameObject.SetActive(false);}
+        }
+    } 
 
     public IEnumerator FadeIn(float duration = 0.5f)
     {

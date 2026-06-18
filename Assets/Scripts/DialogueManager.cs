@@ -263,6 +263,9 @@ public class DialogueManager : MonoBehaviour
         speakerTMP.text = "";
         isTyping = false; // these two by me so WATCH OUT BUDDYY
         skipTyping = false;
+        if (!GameData.introductionOver) {
+        GameData.introductionOver = true; 
+        }
 
         if (portraitImage != null)
         {

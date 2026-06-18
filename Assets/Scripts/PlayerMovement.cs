@@ -77,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
             }
             FlipSprite();
         }
+        else
+        {
+            _animator.SetBool("isRunning", false);
+        }
     }
 
     // SceneMovement for walking into door

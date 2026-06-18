@@ -1,0 +1,39 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk",
+            "text": "Oh great..."
+        },
+        {
+            "speaker": "Dina",
+            "portrait": "DinaTease",
+            "text": "Look, it's the emo kid!"
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "EllaTease",
+            "text": "Still back at it with the arm warmers?"
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "EllaTalk2",
+            "text": "What's the point? We all know."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk",
+            "text": "Why are you still hung up on me?"
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk1",
+            "text": "I don't have time for this right now. Get out of my way."
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "EllaTease",
+            "text": "Have a great first day, Ayla!"
+        }
+    ]
+}

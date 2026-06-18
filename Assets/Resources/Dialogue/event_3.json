@@ -3,12 +3,12 @@
         {
             "speaker": "Ayla",
             "text": "Mom told me to get ready for school.",
-            "portrait": "AylaPJTalk"
+            "portrait": "AylaPJTalk1"
         },
         {
             "speaker": "",
             "text": "Mom told me to get ready for school.",
-            "portrait": "AylaPJTalk",
+            "portrait": "AylaPJTalk1",
             "options": [
                 {
                     "optionText": "Get ready",

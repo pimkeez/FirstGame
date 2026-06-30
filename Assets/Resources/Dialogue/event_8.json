@@ -1,0 +1,114 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "The desks are in pairs. There’s a name next to yours that you don’t recognize.",
+            "portrait": ""
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Alright class, welcome to your World History class!",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "My name is Dr. Nelson! It's a pleasure to meet you all.",
+            "portrait": "C_TeacherTalk1"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Before we begin, I’d like for you all to introduce yourself to your neighbors. Don’t be shy, these will be your assigned seats for the rest of the semester!",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I guess the person didn’t come to school today...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Ugh. Great. I have to sit behind arm warmer all semester.",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "She's really getting on my nerves...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "She's really getting on my nerves...",
+            "portrait": "C_AylaCasualTalk",
+            "options": [
+                {
+                    "optionText": "Retaliate"
+                },
+                {
+                    "optionText": "Ignore her",
+                    "nextDialogueIndex": 16
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Do you ever shut up?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Excuse me, miss, but that's no way to talk to a classmate.",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "But, she-",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "If you have an issue, you can bring it up to me afterclass.",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Whatever.",
+            "portrait": "C_AylacasualTalk"
+        },
+        {
+            "speaker": "",
+            "text": "Ella continues talking in a hushed voice.",
+            "portrait": ""
+        },
+        {
+            "speaker": "Ella",
+            "text": "Yeah. What attitude.",
+            "portrait": "EllaTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "You'd think parents would teach their kids better manners.",
+            "portrait": "EllaTalk2"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Oh. I'm sorry. PARENT. Singular.",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Now that you've introduced yourselves to each other, I'd like to tell you all a little bit about me.",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "",
+            "text": "You zone out for the rest of class.",
+            "portrait": ""
+        },
+        {
+            "speaker": "",
+            "text": "You zone out for the rest of class.",
+            "portrait": "",
+            "nextScene": "SchoolOutside"
+        }
+    ]
+}

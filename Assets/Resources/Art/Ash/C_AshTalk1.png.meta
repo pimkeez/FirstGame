@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7aa5c58f202cd3e4bbc18c04c4ef7d07
+guid: 20272852036a4e94ba73b16b0219d6c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8504836442684638580
-    second: AylaCasualTalk1_0
+      213: 3486622120186231043
+    second: C_AshTalk1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AylaCasualTalk1_0
+      name: C_AshTalk1_0
       rect:
         serializedVersion: 2
-        x: 76
+        x: 26
         y: 0
-        width: 657
-        height: 963
+        width: 708
+        height: 962
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8a3cf0e050c8f980800000000000000
-      internalID: -8504836442684638580
+      spriteID: 30938bb6858f26030800000000000000
+      internalID: 3486622120186231043
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      C_AshTalk1_0: 3486622120186231043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

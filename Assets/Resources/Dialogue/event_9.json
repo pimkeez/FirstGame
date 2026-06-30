@@ -1,0 +1,50 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "It’s a nice day today.",
+            "portrait": ""
+        },
+        {
+            "speaker": "",
+            "text": "The sun feels warm on your shoulders.",
+            "portrait": ""
+        },
+        {
+            "speaker": "",
+            "text": "Two kids run past.",
+            "portrait": ""
+        },
+        {
+            "speaker": "Black-Haired Boy",
+            "text": "Come on, you’re too slow!",
+            "portrait": "AshTalk1"
+        },
+        {
+            "speaker": "Girl",
+            "text": "Where are we going?",
+            "portrait": ""
+        },
+        {
+            "speaker": "Black-Haired Boy",
+            "text": "You’ll see, just hurry up!",
+            "portrait": "AshLaugh"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I should catch the bus before it leaves...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I should catch the bus before it leaves...",
+            "portrait": "C_AylaCasualTalk",
+            "nextScene": "Bedroom"
+        }
+    ]
+}

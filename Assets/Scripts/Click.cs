@@ -44,6 +44,7 @@ public class Click : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dialoguesIndex = GameData.gameStage;
         if (Input.GetMouseButtonDown(0) && !beenClicked) 
         {   
             beenClicked = true; // bug prone later check if this is the issue

@@ -1,0 +1,23 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "Dad told me to get ready and come downstairs...",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Dad told me to get ready and come downstairs...",
+            "portrait": "AylaPJTalk1",
+            "options": [
+                {
+                    "optionText": "Get ready",
+                    "nextScene": "Kitchen"
+                },
+                {
+                    "optionText": "Keep exploring"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Dad",
+            "text": "Did I make her mad or something?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "No, no, darling. I’m sure you didn’t do anything to upset her.",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "..Sometimes we just… have one of those days?",
+            "portrait": "C_FakeMomShatterSad"
+        }
+
+    ]
+}

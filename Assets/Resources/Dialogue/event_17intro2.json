@@ -1,0 +1,62 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "",
+            "text": "You hear footsteps..."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Hey mom-",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Hey there, bunny, breakfast is ready! Get ready and come downstairs.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Oh, were you expecting mom? I should've knocked, sorry.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What...",
+            "portrait": "AylaPJShock"
+        },
+        {
+            "speaker": "Dad",
+            "text": "What's wrong? You look like you just saw a ghost...",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...Is this... some sort of prank?",
+            "portrait": "AylaPJShock"
+        },
+        {
+            "speaker": "Dad",
+            "text": "What, breakfast? Of course not. Come down soon, okay? The food will get cold.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Wai-",
+            "portrait": "AylaPJShock"
+        },
+        {
+            "speaker": "",
+            "text": "He shuts the door."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What the hell is going on...",
+            "portrait": "AylaPJTalk1"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "Upon closer inspection, you notice that the strings are dirty and worn out."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "AylaPJTalk",
+            "text": "I don't feel like playing this right now."
+        }
+    ]
+}

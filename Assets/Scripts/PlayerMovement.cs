@@ -1,4 +1,6 @@
-using System.Collections;
+
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private BlackScreenR blackScreenRInstance;
     GameProgression GameProgressionInstance;
     private Transform _transform;
     private RuntimeAnimatorController originalController;
@@ -14,9 +17,19 @@ public class PlayerMovement : MonoBehaviour
     private AnimationClip casualIdol;
     private AnimationClip casualWalk;
 
-    private Vector3 schoolHallwayDoor; 
-    private Vector3 bedroomDoor; 
-    private Vector3 offset;
+    private UnityEngine.Vector3 schoolHallwayDoor; 
+    private UnityEngine.Vector3 bedroomDoor; 
+    private UnityEngine.Vector3 schoolClassroomPoint; 
+    private UnityEngine.Vector3 schoolOutsidePoint;
+    private UnityEngine.Vector3 kitchenPoint;
+    private UnityEngine.Vector3 stairwayPoint;
+    private UnityEngine.Vector3 carPoint;
+
+    private UnityEngine.Vector3 offset;
+
+    private UnityEngine.Vector2 movement; 
+    public bool isLeftFacing = true; 
+    public float input; 
 
 
     void Awake()
@@ -42,12 +55,15 @@ public class PlayerMovement : MonoBehaviour
 
         schoolHallwayDoor = GameObject.Find("SchoolHallwayDoor").transform.position;
         bedroomDoor = GameObject.Find("BedroomDoor").transform.position;
+        schoolClassroomPoint = GameObject.Find("SchoolClassroomPoint").transform.position; 
+        schoolOutsidePoint = GameObject.Find("SchoolOutsidePoint").transform.position; 
+        kitchenPoint = GameObject.Find("KitchenPoint").transform.position; 
+        stairwayPoint = GameObject.Find("StairwayPoint").transform.position;
+        carPoint = GameObject.Find("CarPoint").transform.position;
 
         offset.x = 10; 
     }
-    private Vector2 movement; 
-    public bool isLeftFacing = true; 
-    public float input; 
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameProgression.currentScene!="SchoolClassroom" || GameProgression.currentScene!="SchoolOutsidePoint") {
         if (!GameData.dialogueActive && !GameData.dialogueOptionActive) {
             input = Input.GetAxisRaw("Horizontal");
             movement.x = input * speed * Time.deltaTime; 
@@ -81,13 +98,14 @@ public class PlayerMovement : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);
         }
+        }
     }
 
     // SceneMovement for walking into door
-    public void SceneMovement(Vector2 offset, string locationName)
+    public void SceneMovement(UnityEngine.Vector2 offset, string locationName)
     {
         
-        _transform.position += (Vector3)offset;
+        _transform.position += (UnityEngine.Vector3)offset;
         // Ensure the coroutine is started on the GameProgression instance
         if (GameProgressionInstance != null)
         {
@@ -101,11 +119,45 @@ public class PlayerMovement : MonoBehaviour
         if (locationName == "SchoolHallway") {
             // float yOffset = schoolHallwayDoor.y - movement.y;
             
-            Vector3 schoolOffset = new Vector3(0f,2f,0f);
+            UnityEngine.Vector3 schoolOffset = new UnityEngine.Vector3(0f,2f,0f);
             _transform.position = schoolHallwayDoor - offset - schoolOffset; 
+            GameProgressionInstance.DialoguePrompt();
         }
         if (locationName == "Bedroom") {
-            _transform.position = bedroomDoor + offset; 
+            UnityEngine.Vector3 schoolOffset = new UnityEngine.Vector3(0f,2f,0f);
+            _transform.position = bedroomDoor + offset - schoolOffset; 
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "SchoolClassroom")
+        {
+            _transform.position = schoolClassroomPoint; 
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "SchoolOutside")
+        {
+            _transform.position = schoolOutsidePoint; 
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "RealityTransition")
+        {
+            GameData.dialogueActive = true;
+            blackScreenRInstance.gameObject.SetActive(true);
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "Kitchen")
+        {
+            _transform.position = kitchenPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "Stairway")
+        {
+            _transform.position = stairwayPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "Car")
+        {
+            _transform.position = carPoint;
+            GameProgressionInstance.DialoguePrompt();
         }
         AnimationChange();
     }
@@ -143,11 +195,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void FlipSprite()
     {
-        // if (input==0)
-        // {
-        //     _spriteRenderer.flipX = false; 
-        //     return; 
-        // }
         if (isLeftFacing)
         {
             _spriteRenderer.flipX = false; 

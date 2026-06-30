@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
         public string text;
         public string portrait;
         public string nextScene; // for future scene transition implementation
+        public string photo; 
         public Option[] options; 
     }
     
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour
         public string optionText;
         public int nextDialogueIndex = -1; // index of the dialogue entry to jump to if this option is selected
         public string nextScene; // for future scene transition implementation
+        public int gameProgressionDialogue = 0;
     }; // for future dialogue options implementation
 
     public DialogueDataWrapper dialogueDataWrapper;
@@ -47,6 +49,9 @@ public class DialogueManager : MonoBehaviour
     private Image portraitImage;
     private Coroutine typingCoroutine;
     private OptionManager optionManagerInstance; // reference to the OptionManager instance
+    private GameProgression gameProgressionInstance; 
+    private Image objectImage; 
+    private Sprite photoSprite; 
     private bool isTyping = false;
     private bool skipTyping = false;
     public float typingSpeed = 0.05f;
@@ -56,8 +61,10 @@ public class DialogueManager : MonoBehaviour
         speakerTMP = GameObject.Find("Canvas/DialogueBox/SpeakerText").GetComponent<TextMeshProUGUI>();
         dialogueTMP = GameObject.Find("Canvas/DialogueBox/DialogueText").GetComponentInChildren<TextMeshProUGUI>();
         portraitImage = GameObject.Find("Canvas/DialogueBox/PortraitImage").GetComponent<Image>();
+        objectImage = GameObject.Find("Canvas/DialogueBox/ObjectImage").GetComponent<Image>(); 
 
         optionManagerInstance = GameObject.Find("Canvas/DialogueBox/OptionManager").GetComponent<OptionManager>();
+        gameProgressionInstance = GameObject.Find("GameProgressionManager").GetComponent<GameProgression>(); 
 
         gameObject.SetActive(false);
     }
@@ -107,9 +114,15 @@ public class DialogueManager : MonoBehaviour
             currentEntry = dialogueDataWrapper.dialogueEntries[dialogueIndex];
             if (currentEntry.options != null)
             {
+                GameProgressionDialogueAdvance(); 
                 optionManagerInstance.enabled = true;
                 optionManagerInstance.gameObject.SetActive(true);
                 optionManagerInstance.LoadOptions(currentEntry.options[0], currentEntry.options[1], dialogueIndex);
+            }
+            if (currentEntry.nextScene != null)
+            {
+                StartCoroutine(gameProgressionInstance.ChangeScene(currentEntry.nextScene));
+                return; 
             }
             else {ShowDialogue();}
         }
@@ -117,6 +130,16 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
         }
+    }
+
+    void GameProgressionDialogueAdvance() {
+        for (int i = 0; i < 2; i++) {
+            if (currentEntry.options[i].gameProgressionDialogue != 0) {
+                int a = currentEntry.options[i].gameProgressionDialogue;
+                gameProgressionInstance.SkipDialogueIndex(a); 
+            }
+        }
+        
     }
 
     public void ShowDialogue()
@@ -136,7 +159,16 @@ public class DialogueManager : MonoBehaviour
             dialogueTMP.text = ""; // Clear text before typing new line
             typingCoroutine = StartCoroutine(TypeLine(currentEntry.text));
         }
-    
+
+        if (currentEntry.photo != null) {
+            photoSprite = Resources.Load<Sprite>($"Art/{currentEntry.photo}");
+        }
+        else
+        {
+            photoSprite = null; 
+        }
+        StartCoroutine(FadeInPhoto(photoSprite,0.5f));
+
         // SET: portrait
         LoadPortrait(); 
 
@@ -159,6 +191,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueIndex < dialogueDataWrapper.dialogueEntries.Length - 1)
         {
             currentEntry = dialogueDataWrapper.dialogueEntries[dialogueIndex + 1]; //ALWAYS when skipping do 1 before index!!! BE CAREFUL WITH THISSSSSS
+            this.dialogueIndex = dialogueIndex + 1; 
             ShowDialogue();
         }
         else
@@ -186,6 +219,54 @@ public class DialogueManager : MonoBehaviour
         }
         isTyping = false;
     }
+
+    IEnumerator FadeInPhoto(Sprite photo, float duration)
+    {
+        
+        if (objectImage == null)
+        {
+            yield break;
+        }
+
+        Debug.Log("objectImage not null, coroutine ran");
+        if (objectImage.sprite == photo)
+        {
+            objectImage.sprite = photo;
+            objectImage.color = new Color(1f, 1f, 1f, photo == null ? 0f : 1f);
+            yield break;
+        }
+
+        float elapsed = 0f;
+        
+        if (objectImage.sprite != null)
+        {
+            while (elapsed < duration)
+            {
+                float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+                objectImage.color = new Color(1f, 1f, 1f, alpha);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        objectImage.color = new Color(1f, 1f, 1f, 0f);
+        objectImage.sprite = photo;
+        elapsed = 0f;
+
+        if (photo != null)
+        {
+            while (elapsed < duration)
+            {
+                float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+                objectImage.color = new Color(1f, 1f, 1f, alpha);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        objectImage.color = new Color(1f, 1f, 1f, photo == null ? 0f : 1f);
+    }
+
 
     IEnumerator FadePortrait(Sprite newPortrait, float duration)
     {
@@ -271,6 +352,12 @@ public class DialogueManager : MonoBehaviour
         {
             portraitImage.sprite = null;
             portraitImage.color = new Color(1f, 1f, 1f, 0f);
+        }
+
+        if (objectImage != null)
+        {
+            objectImage.sprite = null; 
+            objectImage.color = new Color(1f, 1f, 1f, 0f);
         }
 
         gameObject.SetActive(false);

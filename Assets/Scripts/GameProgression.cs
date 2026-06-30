@@ -1,5 +1,6 @@
 using UnityEngine;
-using System.Collections; 
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameProgression : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovementInstance; 
     [SerializeField] private DialogueManager dialogueManagerInstance; 
     [SerializeField] private OptionManager optionManagerInstance; 
+
+    [Header("[DIALOGUE]")]
+    [SerializeField] private int dialoguesIndex;
+    [SerializeField] private List<TextAsset> interactionDialogues;
 
     void Awake()
     {
@@ -31,12 +36,27 @@ public class GameProgression : MonoBehaviour
         // audioSourceSFX = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
+    public void SkipDialogueIndex(int a)
+    {
+        dialoguesIndex += a; 
+    }
+
     public void ShowDialogue(TextAsset dialogue)
     {
         dialogueManager.enabled = true;
         dialogueManager.gameObject.SetActive(true);
         dialogueManager.SetVisualNovelJSONFile(dialogue);
         
+    }
+
+    public void DialoguePrompt()
+    {
+        if (currentScene == "Bedroom")
+        {
+            GameData.gameStage++; 
+        }
+        GameProgressionInstance.ShowDialogue(interactionDialogues[dialoguesIndex]);
+        dialoguesIndex++; 
     }
 
     public IEnumerator ChangeScene(string sceneName) // There's something fragile here about where I put stuff and idk why

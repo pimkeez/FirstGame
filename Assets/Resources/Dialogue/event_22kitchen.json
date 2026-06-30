@@ -1,0 +1,175 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Dad",
+            "text": "There you are!",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You took so long, you had us starting to worry.",
+            "portrait": "C_DadTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Dad...? Is that really you?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Dad? No.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Really?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "No, bunny! What are you talking about? Of course it's me!",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Are you okay?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "She must have hit her head... it could've been that carnival ride yesterday! Remember?",
+            "portrait": "C_FakeMomAngry"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I told you two that one was a bit much.",
+            "portrait": "C_FakeMomAngry"
+        },
+        {
+            "speaker": "Dad",
+            "text": "But she was fine yesterday-",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Carnival? What carnival? Yesterday we-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...yesterday I...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Bunny, seriously, are you okay?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "You should eat something. Here, try some, I made it how you like it-",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I'm not hungry.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Water, then?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I'm not hungry.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Well... do you at least need a hug?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Well... do you at least need a hug?",
+            "portrait": "C_DadSad",
+            "options": [
+                {
+                    "optionText": "Accept"
+                },
+                {
+                    "optionText": "Reject",
+                    "nextDialogueIndex": 20
+                }
+            ]
+        },
+        {
+            "speaker": "",
+            "text": "You give him a firm embrace, like you're scared he'll disappear.",
+            "photo": "MAKE IT BUBBY",
+            "skipId": 24
+        },
+        {
+            "speaker": "Ayla",
+            "text": "No, stay away!",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Oh... okay,",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Sorry, I didn't mean to yell.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "It's okay...",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Honey, are you sure you're well for the first day of school?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "First day...? I thought I already...",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "It's the first day... I can't miss it.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I'll pack this food for lunch.... You shoould go upstairs and make sure you have everything packed.",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I'll pack this food for lunch.... You shoould go upstairs and make sure you have everything packed.",
+            "portrait": "C_FakeMomSad",
+            "options": [
+                {
+                    "optionText": "Do what she says",
+                    "nextScene": "Bedroom",
+                    "gameProgressionDialogue": 1
+                },
+                {
+                    "optionText": "Eavesdrop",
+                    "nextScene": "Stairway"
+                }
+            ]
+        }
+    ]
+}

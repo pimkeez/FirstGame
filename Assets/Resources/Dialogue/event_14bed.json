@@ -1,0 +1,23 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "I guess I should just go to bed...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I guess I should just go to bed...",
+            "portrait": "AylaPJTalk",
+            "options": [
+                {
+                    "optionText": "Go to bed",
+                    "nextScene": "RealityTransition"
+                },
+                {
+                    "optionText": "Keep exploring"
+                }
+            ]
+        }
+    ]
+}

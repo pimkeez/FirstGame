@@ -1,0 +1,18 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You open the sketchbook."
+        },
+        {
+            "speaker": "",
+            "text": "It lacks complete drawings. Just silly doodles of cats.",
+            "photo": "SketchbookPhoto"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I can't seem to finish any drawings lately...",
+            "portrait": "AylaPJTalk"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "A book you and your father used to read is now displayed on the top level of the shelf. You find it odd."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This isn't where I usually place it...",
+            "portrait": "AylaPJTalk1"
+        }
+    ]
+}

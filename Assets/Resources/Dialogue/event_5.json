@@ -1,0 +1,14 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk",
+            "text": "My first block is in 1209."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk1",
+            "text": "It should be down this hallway..."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "portrait": "AylaPJTalk1",
+            "text": "Mom told me to get ready for school."
+
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "AylaPJTalk",
+            "text": "I shouldn’t play this right now."
+        }
+    ]
+}

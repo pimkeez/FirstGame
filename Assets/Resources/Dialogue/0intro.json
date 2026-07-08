@@ -1,0 +1,64 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk1",
+            "text": "Ayla?",
+            "flag": "testFlag",
+            "flagValue": false,
+            "hasFlagValue": true
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk2",
+            "text": "Ayla, wake up.",
+            "flag": "testFlag2",
+            "flagValue": false,
+            "hasFlagValue": true
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk2",
+            "text": "Ending...",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 9,
+            "hasCondition": true
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk1",
+            "text": "It's time for school. You're going to be late."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "AylaPJTalk",
+            "text": "Do I have to go...?"
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk1",
+            "text": "Yes honey. It's the first day, you can't miss it."
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk2",
+            "text": "I'm sorry, I didn't have time to pack you lunch. But I put some money in your account. That should work."
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk2",
+            "text": "I have to go now, but don't dwaddle, okay? Bus comes in 20."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "AylaPJTalk1",
+            "text": "Ok mom. I love you."
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk1",
+            "text": "Love you too, sweetie. Get going."
+        }
+    ]
+}

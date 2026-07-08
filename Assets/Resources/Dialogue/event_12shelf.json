@@ -1,0 +1,97 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "A hidden book on the bottom catches your eye. Your dad used to read this to you when you were younger."
+        },
+        {
+            "speaker": "",
+            "text": "Read it?"
+        },
+        {
+            "speaker": "",
+            "text": "Read it?",
+            "options": [
+                {
+                    "optionText": "Read"
+                },
+                {
+                    "optionText": "Don't read",
+                    "nextDialogueIndex": 20
+                }
+            ]
+        },
+        {
+            "speaker": "",
+            "text": "Once upon a time, there was a young bunny. She grew up her whole life in the burrow."
+        },
+        {
+            "speaker": "",
+            "text": "Her parents, out of concern for her safety, never let her explore the outside. But this bunny's curiosity could not be contained."
+        },
+        {
+            "speaker": "",
+            "text": "She wanted to live, not just survive. So one night, she snuck out of the burrow, and explored."
+        },
+        {
+            "speaker": "",
+            "text": "She saw beautiful sights. She felt the warm sun on her fur, and found friends who didn't look like her."
+        },
+        {
+            "speaker": "",
+            "text": "But the bunny wanted more. She wanted to live. So, she set her sights on climbing a grand mountain."
+        },
+        {
+            "speaker": "",
+            "text": "'No animal could do it, especially not a bunny' they said. But this only made her want to try more."
+        },
+        {
+            "speaker": "",
+            "text": "On the way, she encountered many obstacles. Foxes who hunted her down. Thunderstorms that stole the tranquility of the night. Steep hills leaving her tiny feet exhausted."
+        },
+        {
+            "speaker": "",
+            "text": "Soon enough, she realized she couldn't make it. Not alone, and not with her inexperience."
+        },
+        {
+            "speaker": "",
+            "text": "Depressed, she descended the mountain. A tortoise found her wallowing by the river."
+        },
+        {
+            "speaker": "",
+            "text": "'Why do you need to do this?' he'd said."
+        },
+        {
+            "speaker": "",
+            "text": "'To make my life significant. To live. Truly live.' the bunny replied."
+        },
+        {
+            "speaker": "",
+            "text": "'Who said living had to be grand? Everything you've done up to this point was living. Every laugh, every safe night underground, every struggle.'"
+        },
+        {
+            "speaker": "",
+            "text": "'To live is to simply experience what is around you. To take every moment and profit from it.'"
+        },
+        {
+            "speaker": "",
+            "text": "'But the mountain,' the bunny replied. 'I want to scale it.'"
+        },
+        {
+            "speaker": "",
+            "text": "'The mountain will be there for you when you're ready. For now, just live.' the tortoise advised."
+        },
+        {
+            "speaker": "",
+            "text": "So live the bunny did. She went home, and grew up a little more. Then, she explored again, reaching new sights."
+        },
+        {
+            "speaker": "",
+            "text": "And one day, she still pledged to scale the mountain. But that was later, and this was now."
+        },
+        {
+            "speaker": "",
+            "text": "Now, her task was to just live."
+        }
+    ]
+}

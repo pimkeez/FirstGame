@@ -1,0 +1,17 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You open the sketchbook."
+        },
+        {
+            "speaker": "",
+            "text": "It's a lot more full. Some of these artworks you don't even remember making, yet it's your art style."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...Who drew these?",
+            "portrait": "AylaPJTalk1"
+        }
+    ]
+}

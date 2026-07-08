@@ -1,0 +1,307 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "Mom decided to take me to school today."
+        },
+        {
+            "speaker": "",
+            "text": "You don't remember the last time she was feeling up to do that."
+        },
+        {
+            "speaker": "",
+            "text": "The car is cleaner than it is typically, and the stench of cigarettes is absent."
+        },
+        {
+            "speaker": "",
+            "text": "Everything is freaking you out..."
+        },
+        {
+            "speaker": "Mom",
+            "text": "So, are you excited for your first day of school?",
+            "portrait": "C_FakeMomTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I guess I am?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Come on, it's Freshman year! You should be excited!",
+            "portrait": "C_FakeMomTalk3"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Besides, isn't being a high schooler what all of you have been raving about for years?",
+            "portrait": "C_FakeMomTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Please. Anyone with half a brain knows that it just gets worse from here.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Hey, don't be so pessimistic. There are lots of new kids to meet!",
+            "portrait": "C_FakeMomTalk3"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Who knows? Maybe you'll meet a super cool, cute guy in first period.",
+            "portrait": "C_FakeMomTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Or a cute girl-",
+            "portrait": "C_FakeMomTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Mom!",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Relax, relax, I was just kidding around!",
+            "portrait": "C_FakeMomTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Kidding around...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "What was that?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I... I just feel like I haven't heard you joke around in awhile.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I... I just feel like I haven't heard you joke around in awhile.",
+            "portrait": "C_AylaCasualTalk",
+            "options": [
+                {
+                    "optionText": "Ask about dad"
+                },
+                {
+                    "optionText": "Ask about the car",
+                    "nextDialogueIndex": 24
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...What's the deal with this? Why are you acting completely fine? Why is dad not... why is he here?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Why are you so upset? I thought you missed him.",
+            "portrait": "C_FakeMomShatterTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Wha-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I think you're just tired, honey. Everything is fine.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "It's not-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I don't know what you're talking about. End of discussion.",
+            "portrait": "C_FakeMomShatterTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...",
+            "portrait": "C_AylaCasualTalk1",
+            "skipId": 29
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Did you deep clean the car recently?",
+            "portrait": "C_AylaCasualTalk1" 
+        },
+        {
+            "speaker": "Mom",
+            "text": "No, why do you ask?",
+            "portrait": "C_FakeMomTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Just... it doesn't smell like cigarettes anymore...",
+            "portrait": "C_AylaCasualTalk1" 
+        },
+        {
+            "speaker": "Mom",
+            "text": "You know I quit after I met your dad. Why would it smell?",
+            "portrait": "C_FakeMomTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You're right... I don't know what I was thinking...",
+            "portrait": "C_AylaCasualTalk1" 
+        },
+        {
+            "speaker": "Mom",
+            "text": "So, what was that this morning? Are you sure you're feeling okay?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "If we did something to upset you, you know you don't have to be afraid to tell us...",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I want everything to be as perfect as it can be for you, after all.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I want everything to be as perfect as it can be for you, after all.",
+            "portrait": "C_FakeMomShatterSad",
+            "options": [
+                {
+                    "optionText": "It's fine"
+                },
+                {
+                    "optionText": "Something's wrong",
+                    "nextDialogueIndex": 35
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I'm fine. Really",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "If you're sure... I'm always here to talk if you need me.",
+            "portrait": "C_FakeMomSad",
+            "skipId": 52
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Everything is wrong... everything has changed...",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Of course things are changing, you're growing up. That's not always a bad thing, you know.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Stop Mom. You know I don't mean it like that.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Stop avoiding the subject. Stop acting like everything is perfectly normal. Stop-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "The words don't escape your mouth."
+        },
+        {
+            "speaker": "",
+            "text": "Or rather, you can't bring yourself to say them?"
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "Mom",
+            "text": "Ayla.",
+            "portrait": "C_FakeMomShatterTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "Mom",
+            "text": "Drop it.",
+            "portrait": "C_FakeMomShatterTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "pr... what..?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "To tell you the truth, honestly, Dad is pretty upset over this morning.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "I know you didn't mean it, but he was really hurt by your behavior. You should talk to him when you get home.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Make sure he knows that it wasn't his fault. You know he can be.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "We're almost there, now. Just have a good first day, okay honey? Come home if you feel unwell.",
+            "portrait": "C_FakeMomShatterSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Okay....",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Okay....",
+            "portrait": "C_AylaCasualTalk",
+            "nextScene": "SchoolHallway"
+        }
+    
+    ]
+}

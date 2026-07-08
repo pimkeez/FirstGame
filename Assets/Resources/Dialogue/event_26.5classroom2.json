@@ -1,0 +1,23 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "This is the right classroom.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This is the right classroom.",
+            "portrait": "C_AylaCasualTalk1",
+            "options": [
+                {
+                    "optionText": "Enter",
+                    "nextScene": "SchoolClassroom2"
+                },
+                {
+                    "optionText": "Stay"
+                }
+            ]
+        }
+    ]
+}

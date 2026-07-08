@@ -1,0 +1,19 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "Your mom sent you a text.",
+            "portrait": "",
+            "photo": "PhoneScreen"
+        },
+        {
+            "speaker": "",
+            "text": "Looks like you'll be asleep when she comes home tonight."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Again...?",
+            "portrait": "AylaPJTalk1"
+        }
+    ]
+}

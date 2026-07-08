@@ -1,0 +1,17 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You examine the strings."
+        },
+        {
+            "speaker": "",
+            "text": "They seem to be in good condition. They must've been changed out recently."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "If I didn't change these strings, who did?",
+            "portrait": "AylaPJTalk1"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You close your eyes, not expecting to sleep easily. Somehow, sleep eventually finds you.",
+            "hasCondition": true,
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 27
+        },
+        {
+            "speaker": "",
+            "text": "Sometime later, you are awoken by the sound of your bedroom door."
+        },
+        {
+            "speaker": "Mom",
+            "text": "Goodnight, Ayla.",
+            "portrait": "RealMomTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Wait. Mom...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Yes, honey?",
+            "portrait": "RealMomTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Can you sing me your song again? The one you made after... he passed...",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Sorry... honey... I'm exhausted. I will tomorrow, okay?",
+            "portrait": "RealMomTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Oh. Okay...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Goodnight, Mom. Love you.",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Love you too.",
+            "portrait": "RealMomTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "She leaves."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "She told me she'd sing it last night too...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "She's working hard to support herself as it is... it doesn't help that I'm here...",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I should just...",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...go to bed...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "",
+            "text": "You try to dull out your thoughts by going to bed."
+        },
+        {
+            "speaker": "",
+            "text": "It doesn't work."
+        },
+        {
+            "speaker": "",
+            "text": "It never works."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I'm so tired...",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "Somehow, unconsciousness finds you..."
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "You hear birds chirping."
+        },
+        {
+            "speaker": "",
+            "text": "It's morning already?"
+        },
+        {
+            "speaker": "",
+            "text": "You're..."
+        },
+        {
+            "speaker": "",
+            "text": "here?"
+        },
+        {
+            "speaker": "",
+            "text": "..."
+        },
+        {
+            "speaker": "",
+            "text": "It feels like no time passed at all, and yet it feels like it's been years."
+        },
+        {
+            "speaker": "",
+            "text": "Your bones ache with a certain heaviness."
+        },
+        {
+            "speaker": "",
+            "text": "Your bones ache with a certain heaviness.",
+            "nextScene": "Bedroom"
+        }
+    ]
+}

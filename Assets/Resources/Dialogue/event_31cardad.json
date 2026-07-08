@@ -1,0 +1,14 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "It's your dad who picks you up... you don't know if you're terrified or excited to see him...",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Sorry, bunny. Your mom would’ve picked you up but she got called away for something real quick.",
+            "portrait": "C_DadSad"
+        }
+    ]
+}

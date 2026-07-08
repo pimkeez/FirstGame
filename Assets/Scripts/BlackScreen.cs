@@ -27,7 +27,6 @@ public class BlackScreen : MonoBehaviour
 
     public IEnumerator FadeIn(float duration = 0.5f)
     {
-        Debug.Log("BlackScreen: FadeIn started");
         blackScreen.color = new Color(0f, 0f, 0f, 0f);
         GameData.transitionActive = true;
 
@@ -41,12 +40,10 @@ public class BlackScreen : MonoBehaviour
         }
 
         blackScreen.color = new Color(0f, 0f, 0f, 1f);
-        Debug.Log("BlackScreen: FadeIn completed");
     }
 
     public IEnumerator FadeOut(float duration = 0.5f)
     {
-        Debug.Log("Fading out...");
         float elapsed = 0f;
         while (elapsed < duration)
         {

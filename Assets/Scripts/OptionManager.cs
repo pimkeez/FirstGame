@@ -79,19 +79,18 @@ public class OptionManager : MonoBehaviour
         if (optionInstance == option1Button)
         {
             selectedOption = option1;
-            Debug.Log("Option 1 selected");
         }
         else if (optionInstance == option2Button)
         {
             selectedOption = option2;
-            Debug.Log("Option 2 selected");
         }
         dialogueManagerInstance.enabled = true; 
         gameProgressionInstance.enabled = true; 
 
+        dialogueManagerInstance.GameProgressionDialogueAdvance(selectedOption); // Pass the selected option to the method
+
         if (selectedOption.nextScene != null)
         {
-            Debug.Log("Changing scenes...");
             StartCoroutine(gameProgressionInstance.ChangeScene(selectedOption.nextScene));
         
             return;
@@ -112,7 +111,6 @@ public class OptionManager : MonoBehaviour
     {
         GameData.dialogueOptionActive = false;
         optionManagerInstance.gameObject.SetActive(false);
-        Debug.Log("closing options...");
         // i think this isn't running
         
         // add more

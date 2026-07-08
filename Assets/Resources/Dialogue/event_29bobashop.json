@@ -1,0 +1,331 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "Ella was right, the place was not far. You all bought boba, but there's an air of awkward tension resting between you."
+        },
+        {
+            "speaker": "Dina",
+            "text": "So... how was your summer?",
+            "portrait": "DinaHappy"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Fine. How was yours?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dina",
+            "text": "It was good! Ella and I went to the beach together.",
+            "portrait": "DinaHappy"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Dina, no offense, but I think you're going to bore her with all that small talk.",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Dina",
+            "text": "Right. Sorry.",
+            "portrait": "DinaSad"
+        },
+        {
+            "speaker": "Ella",
+            "text": "So, about this morning...",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "It's really fine, Ella. We don't have to talk about it.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "It didn't seem fine to me, Ayla. We've been friends for years and I haven't ever seen you like that.",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "For years, huh?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Were we not?",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Were we not?",
+            "portrait": "EllaSad",
+            "options": [
+                {
+                    "optionText": "Tell them",
+                    "gameProgressionDialogue": 1
+                },
+                {
+                    "optionText": "Don't tell them",
+                    "nextDialogueIndex": 39,
+                    "gameProgressionDialogue": 1
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Are any of you actually yourselves?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "...What?",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I mean, first my dad comes back to life. Something that is TOTALLY normal.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "And now it seems like everyone's trying to suck up to me. What's with that?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "Ella and Dina still look confused."
+        },
+        {
+            "speaker": "",
+            "text": "Ella and Dina still look confused.",
+            "options": [
+                {
+                    "optionText": "Keep going"
+                },
+                {
+                    "optionText": "Give up",
+                    "nextDialogueIndex": 39
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This is what I mean. You're both doing it right now.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Everyone keeps adhering to me. My wishes, my feelings. If I act like any of you did something wrong, you grovel at my feet begging for forgiveness.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What is this, really? What kind of trick is this?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ella",
+            "text": "All we wanted to do was make you happy, Ayla. Are we not making you happy?",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ella",
+            "text": "All we wanted to do was make you happy, Ayla. Are we not making you happy?",
+            "portrait": "EllaShatter",
+            "options": [
+                {
+                    "optionText": "Keep going"
+                },
+                {
+                    "optionText": "Give up",
+                    "nextDialogueIndex": 39
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "No. What are you all, some marionettes for someone... something else?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This doesn't make me happy. Nothing here is making me happy.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ella",
+            "text": "...Are you sure about that, Ayla?",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Admit it. It's better for you here. You do feel happier here. Isn't that all that matters?",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "No, that's-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "We need to stop talking about this. She's angry.",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ella",
+            "text": "We need to stop talking about this. She's angry.",
+            "portrait": "EllaShatter",
+            "options": [
+                {
+                    "optionText": "Keep going"
+                },
+                {
+                    "optionText": "Give up",
+                    "nextDialogueIndex": 39
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What? Who is she?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Ayla, drop it.",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Ayla, drop it.",
+            "portrait": "EllaShatter",
+            "options": [
+                {
+                    "optionText": "Keep going"
+                },
+                {
+                    "optionText": "Give up",
+                    "nextDialogueIndex": 39
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I can't do that until you give me answers. What do you mean?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Ayla... it's...",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ella",
+            "text": "..it's too late. She's here.",
+            "portrait": "EllaShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Wh-",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ella",
+            "text": "So, what are you planning to do for Homecoming?",
+            "portrait": "EllaTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...what were we just talking about?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dina",
+            "text": "She said what are you planning to do for Homecoming! Jeez, you need to stop zoning out, silly.",
+            "portrait": "DinaHappy"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Homecoming? I- I don't have any plans.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dina",
+            "text": "You should come with us! We're planning on going dress shopping next week.",
+            "portrait": "DinaHappy"
+        },
+        {
+            "speaker": "Ella",
+            "text": "And we also wanted to go to a restaurant before the dance.",
+            "portrait": "EllaTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah... yeah, that'd be nice.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dina",
+            "text": "Please choose something not too heavy. I gained like, 5 pounds RIGHT before the 8th grade dance.",
+            "portrait": "DinaSad"
+        },
+        {
+            "speaker": "Ella",
+            "text": "And whose fault is that? You're the one who decided to order that much!",
+            "portrait": "EllaLaugh"
+        },
+        {
+            "speaker": "Dina",
+            "text": "It was yours! You tempted me by picking Mexican Food!",
+            "portrait": "DinaTease"
+        },
+        {
+            "speaker": "Ella",
+            "text": "You ordered the Mega Mountain Taco Plate. I don't know what you were expecting, Dina.",
+            "portrait": "EllaTease"
+        },
+        {
+            "speaker": "Dina",
+            "text": "Because the place you chose was too tempting!",
+            "portrait": "DinaTease"
+        },
+        {
+            "speaker": "",
+            "text": "They continue to talk about simple things. Your mind is fuzzy, like you can't remember something important."
+        },
+        {
+            "speaker": "",
+            "text": "Right. Dad's still waiting for you at home."
+        },
+        {
+            "speaker": "",
+            "text": "But for now, you're content to listen to Ella and Dina bicker."
+        },
+        {
+            "speaker": "",
+            "text": "Hanging out like this, it's nice. You missed it."
+        },
+        {
+            "speaker": "",
+            "text": "Eventually, the time comes to go home.",
+            "hasFlagValue": true,
+            "flag": "bobaShop",
+            "flagValue": true
+        },
+        {
+            "speaker": "",
+            "text": "Eventually, the time comes to go home.",
+            "nextScene": "Car"
+        }
+    ]
+}

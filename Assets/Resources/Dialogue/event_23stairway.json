@@ -13,8 +13,42 @@
         {
             "speaker": "Mom",
             "text": "..Sometimes we just… have one of those days?",
-            "portrait": "C_FakeMomShatterSad"
+            "portrait": "C_FakeMomShatterSad",
+            "flag": "rejectHug",
+            "condition": true,
+            "skipId": 3,
+            "hasCondition": true
+        },
+        {
+            "speaker": "Dad",
+            "text": "She pushed me, Liz. I’ve never seen her lash out at me like that.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Tell you what, I'll take her to school today and ask her about it, okay?",
+            "portrait": "C_FakeMomTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Thank you.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Of course. I love you.",
+            "portrait": "C_FakeMomTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Love you, too.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Love you, too.",
+            "portrait": "C_DadSad",
+            "nextScene": "Car"
         }
-
     ]
 }

@@ -1,0 +1,132 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "It’s a nice day today."
+        },
+        {
+            "speaker": "",
+            "text": "The sun feels warm on your shoulders."
+        },
+        {
+            "speaker": "",
+            "text": "Today was... fun. It nearly made you forget about the anomaly that was this morning."
+        },
+        {
+            "speaker": "",
+            "text": "Going home now... you'll have to face your dad. You don't feel ready to do that.",
+            "hasCondition": true,
+            "flag": "readNote",
+            "condition": true,
+            "skipId": 5
+        },
+        {
+            "speaker": "",
+            "text": "You get a text from an unknown number. It reads: hii it's ash. ik we JUST talked, but are you free today? there's a cool spot not far from here i wanna show you."
+        },
+        {
+            "speaker": "",
+            "text": "You're about to reply when you see Ella running up to you.",
+            "skipId": 6
+        },
+        {
+            "speaker": "",
+            "text": "You catch sight of Ella running up to you."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You're kidding...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Hey! Ayla! Wait up!",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ella",
+            "text": "We didn't get to finish our conversation earlier. I just wanted to clear things up between us.",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ella",
+            "text": "If I said anything, I meant no harm by it. Do you have time to talk now?",
+            "portrait": "EllaSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Are you joking...?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "I'm not! Me and Dina wanted to grab boba together. You can come with?",
+            "portrait": "EllaSad",
+            "hasCondition": true,
+            "flag": "readNote",
+            "condition": true,
+            "skipId": 14
+        },
+        {
+            "speaker": "",
+            "text": "Whether it's with Ella or Ash, it'd be nice to delay going home for a little while."
+        },
+        {
+            "speaker": "",
+            "text": "Whether it's with Ella or Ash, it'd be nice to delay going home for a little while.",
+            "options": [
+                {
+                    "optionText": "Go with Ella",
+                    "nextDialogueIndex": 15
+                },
+                {
+                    "optionText": "Go with Ash",
+                    "nextDialogueIndex": 18,
+                    "gameProgressionDialogue": 1
+                }
+            ]
+        },
+        {
+            "speaker": "",
+            "text": "You have nothing better to do... it beats going home"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Ok. Fine, I'll get boba with you guys.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Yes!! Come on, Dina is waiting over there. It's not a far walk.",
+            "portrait": "EllaTalk1"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Yes!! Come on, Dina is waiting over there. It's not a far walk.",
+            "portrait": "EllaTalk1",
+            "nextScene": "BobaShop"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Sorry, I promised somebody else I'd meet them. Maybe some other time.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ella",
+            "text": "Oh, okay. You still have my number, right? If you change your mind, or wanna talk, just text me.",
+            "portrait": "Ellasad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Will do.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Will do.",
+            "portrait": "C_AylaCasualTalk",
+            "nextScene": "Forest"
+        }
+
+    ]
+}

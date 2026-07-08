@@ -1,0 +1,252 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "That's different. The person next to you is actually here."
+        },
+        {
+            "speaker": "",
+            "text": "He's... actually kind of cute."
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Alright class, welcome to your World History class!",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "My name is Dr. Nelson! It's a pleasure to meet you all.",
+            "portrait": "C_TeacherTalk1"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Before we begin, I’d like for you all to introduce yourself to your neighbors. Don’t be shy, these will be your assigned seats for the rest of the semester!",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "",
+            "text": "The boy turns to look at you and smiles."
+        },
+        {
+            "speaker": "Black-Haired Boy",
+            "text": "Hey. I'm Ash. What's your name?",
+            "portrait": "C_AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Ayla.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "That's a cool name, I haven't heard it before.",
+            "portrait": "C_AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Thanks. My dad chose it for me.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "So I haven't seen you around. What middle school did you go to?",
+            "portrait": "C_AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Freedom Middle.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "That makes sense, I went to Stonewater. That's probably why I haven't seen you around.",
+            "portrait": "C_AshTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "What other classes do you have today?",
+            "portrait": "C_AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "PE, my music class, and then math.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Oh, cool! We'll be in the same PE block then! If I'm being honest, though, I can't say I'll enjoy it...",
+            "portrait": "C_AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Me neither... they always act so serious, like it's a military boot camp or something.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Really, though. I mean, seriously, I didn't know I was getting drafted.",
+            "portrait": "C_AshLaugh"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah... I'm more of a music and arts person myself. I don't really like sports.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Same, for sure. Oh, that reminds me, I have music class after PE too! What class is it exactly?",
+            "portrait": "C_AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Advanced Guitar.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Really? Me too! I guess we'll be seeing a lot of each other this school year.",
+            "portrait": "C_AshTalk1"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Alright class, settle down! Now that you know a bit about each other, let me tell you a bit about myself.",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "I have a PhD in History from Carnegie Mellon University, and I've been teaching for over 20 years.",
+            "portrait": "C_TeacherTalk1"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Now, I love this subject, and I have a tendency to go off on tangents. So I ask that you all please keep my time conscious if that happens. I want to make sure we get through the material.",
+            "portrait": "C_TeacherTalk2"
+        },
+        {
+            "speaker": "",
+            "text": "Ash is scribbling something in his notebook. He slides it over to show you a note."
+        },
+        {
+            "speaker": "",
+            "text": "Read it?"
+        },
+        {
+            "speaker": "",
+            "text": "Read it?",
+            "options": [
+                {
+                    "optionText": "Read it"
+                },
+                {
+                    "optionText": "Push it away",
+                    "nextDialogueIndex": "44"
+                }
+            ]
+        },
+        {
+            "speaker": "",
+            "text": "It reads: if he went to Carnegie Mellon, why is he teaching in this shithole?",
+            "hasFlagValue": true,
+            "flag": "readNote",
+            "flagValue": true,
+            "photo": "MAKE IT BUBBY"
+        },
+        {
+            "speaker": "",
+            "text": "You laugh a little at the note."
+        },
+        {
+            "speaker": "Teacher",
+            "text": "My favorite period of history? I'm not sure I can pinpoint just one period, but I have always found the Peloponnesian War to be fascinating. It's fascinating what it did for language development.",
+            "portrait": "C_TeacherTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "He passes another note: god he is sooo boring...",
+            "photo": "MAKE IT BUBBY"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Is that note passing I see back there?",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Uhh... yes...?",
+            "portrait": "C_AshTalk2"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "If you two don't want to start failing the class, I suggest you build good habits. And that starts with paying attention.",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Sorry sir, won't happen again.",
+            "portrait": "C_AshTalk2"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "And you, miss?",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yes sir, I apologize.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Teacher",
+            "text": "Hmph. Well, as I was saying...",
+            "portrait": "C_TeacherAngry"
+        },
+        {
+            "speaker": "",
+            "text": "Ash seems to surveil the teacher, waiting for the right moment to write another note."
+        },
+        {
+            "speaker": "",
+            "text": "He taps his notebook discretely. It reads: talk later? write me ur number? ;p",
+            "photo": "MAKE IT BUBBY"
+        },
+        {
+            "speaker": "",
+            "text": "You catch his eye. He smiles and winks at you."
+        },
+        {
+            "speaker": "",
+            "text": "You smile back and write it, trying not to ignore the way your face feels red."
+        },
+        {
+            "speaker": "",
+            "text": "He hums contentedly. Your mind is racing."
+        },
+        {
+            "speaker": "",
+            "text": "What the HELL is happening...",
+            "skipId": 45
+        },
+        {
+            "speaker": "",
+            "text": "You push it away, and the teacher continues his lecture. He doesn't try again.",
+            "hasFlagValue": true,
+            "flag": "readNote",
+            "flagValue": false
+        },
+        {
+            "speaker": "",
+            "text": "The rest of the class goes by uneventfully."
+        },
+        {
+            "speaker": "",
+            "text": "The rest of the class goes by uneventfully.",
+            "nextScene": "SchoolOutside"
+        }
+
+
+
+
+
+
+    ]
+}

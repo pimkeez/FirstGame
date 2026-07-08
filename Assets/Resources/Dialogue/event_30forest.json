@@ -1,0 +1,435 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "Ash takes you to a quiet spot by a river."
+        },
+        {
+            "speaker": "Ash",
+            "text": "Thanks for coming out here with me.",
+            "portrait": "AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Of course. Everyone knows the first thing you should do with someone is to let them take you to a secluded spot in the woods.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Hah. Yeah, of course. I swear I won't do anything to you, though.",
+            "portrait": "AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah, yeah, I trust you, don't worry.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "This world is far too perfect for me to get kidnapped right now..."
+        },
+        {
+            "speaker": "Ayla",
+            "text": "It's nice here. Thanks. It beats going home.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "That's odd. Most people can't wait to go home after their first day of school.",
+            "portrait": "AshTalk2" 
+        },
+        {
+            "speaker": "Ayla",
+            "text": "And yet, here we are. We must be fools.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Yeah... I like home, but to be honest, sometimes my parents can be a little overbearing.",
+            "portrait": "AshSad" 
+        },
+        {
+            "speaker": "Ash",
+            "text": "That's why I come out here every once in awhile. It's quiet... nice to get out, you know?",
+            "portrait": "AshSad" 
+        },
+        {
+            "speaker": "Ash",
+            "text": "So yeah, welcome to my little corner. I don't usually take people here until I get to know them better. You must be special.'",
+            "portrait": "AshLaugh" 
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Special, huh?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "So your guitar. Why'd you bring it today?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "I was always planning to come out here afterschool. I usually take my guitar.",
+            "portrait": "AshTalk1" 
+        },
+        {
+            "speaker": "Ash",
+            "text": "It's relaxing just being surrounded by nature and the sound of the strings, you know?",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah... the silence helps out here, too.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Today was... honestly one of the best days I've had in awhile. But I'm still waiting for something to happen. It's like I don't trust it.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "And it feels like my head is screwed on backwards. Like I just woke up from a long dream... or maybe like I'm still in one.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I don't know if it's me... or everybody else that's acting crazy...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Maybe if you play something it'll help?",
+            "portrait": "AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "No, no, it's okay. You can play something though.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "No, I shouldn't, you should. It'll help you!",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What'll help me is if you play me a song now.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Hmm... you have to give me a good reason why.",
+            "portrait": "AshTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Because it'll help me stop thinking about how crazy everything feels right now?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "..Hmph... point heard...",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ash",
+            "text": "I don't often have audiences... but since you asked...",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "",
+            "text": "He starts up a simple arpeggio. He looks a little nervous, but then unexpectedly, starts to sing."
+        },
+        {
+            "speaker": "",
+            "text": "It's a song you recognize. You know the harmony to it."
+        },
+        {
+            "speaker": "",
+            "text": "Of course you do. You start to sing along."
+        },
+        {
+            "speaker": "",
+            "text": "It's peaceful. Your voices compliment each other."
+        },
+        {
+            "speaker": "",
+            "text": "For a moment you get lost into the music. And then it ends as quickly as it started."
+        },
+        {
+            "speaker": "Ash",
+            "text": "Wow. You didn't tell me you sang.",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You didn't, either.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "",
+            "text": "He's starting intently. Does he want to-?"
+        },
+        {
+            "speaker": "",
+            "text": "He's starting intently. Does he want to-?",
+            "options": [
+                {
+                    "optionText": "Kiss him",
+                    "nextDialogueIndex": 79
+                },
+                {
+                    "optionText": "This isn't right"
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "There's just no way.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "What do you mean?",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You! All of this! There's just no way in hell.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Ayla, speak to me calmly. Did I do something wrong?",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Ash. What's your type?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "My... type? Romantically?",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What else?",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "I guess... artistically inclined people? And... alternative dressing, too, if I'm honest.",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "So kind of like me?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "...yeah?",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What about your stance on kids? Do you want any in the future?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "...No, well, at least not biological ones? I would consider fostering or adopting?",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ash",
+            "text": "But Ayla, what does this have to do with-",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What about your stance on politics?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Ayla, can you tell me-",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Answer me first.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "...Well... I think everyone should be politically active. Ignorance will always catch up to someone.",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I knew it.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Knew what?",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You're too PERFECT, Ash.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "...I mean... thanks?",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You misunderstand. I mean, what are the chances of meeting the ideal, infuriatingly perfect potential partner on my first day of high school?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "On a day where everything has been nothing less than perfect, this is no coincidence.",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "I don't understand, Ayla. What are you saying?",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Are you even real? I mean, REALLY. Are you THINKING right now? Is everything just DESIGNED for me?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "I-",
+            "portrait": "AshTalk2"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Where did the grief go? The bullying? How do I know that you- or ANYONE else is real?",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Of course we're real-",
+            "portrait": "AshSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "And then there's me. I don't even think I'm SUPPOSED to be here right now. The last thing I remember is-",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Ayla.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ash",
+            "text": "You are alive. I promise you.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "...am I? What is this place? Is it some kind of purgatory...?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Does it matter? This feels real. It's all you need. You don't have to suffer, anymore.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ash",
+            "text": "You've been slowly suffocating for years. But here you can finally breathe.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Does that sound so bad?",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Does that sound so bad?",
+            "portrait": "AshShatter",
+            "options": [
+                {
+                    "optionText": "Give in",
+                    "nextDialogueIndex": 76
+                },
+                {
+                    "optionText": "Refuse"
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I can't do that. I need to know the truth or drive myself crazy trying.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Goodbye, Ash. I'm going home. To my REAL home.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Good luck, Ayla.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Good luck, Ayla.",
+            "portrait": "AshShatter",
+            "nextScene": "Car"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "No... it doesn't sound bad...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ash",
+            "text": "Then don't worry about it. Just live.",
+            "portrait": "AshShatter"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I... okay..",
+            "portrait": "C_AylaCasualTalk",
+            "skipId": 80
+        },
+        {
+            "speaker": "",
+            "text": "You haven't kissed anyone before this. It's short. It's nice."
+        },
+        {
+            "speaker": "",
+            "text": "You two talk for hours, learning about each other. You lay on his shoulder."
+        },
+        {
+            "speaker": "",
+            "text": "It feels like it was expertly molded to fit your cheekbone. But maybe that's not a bad thing."
+        },
+        {
+            "speaker": "",
+            "text": "It feels like it was expertly molded to fit your cheekbone. But maybe that's not a bad thing.",
+            "nextScene": "Car"
+        }
+        
+
+
+    ]
+}

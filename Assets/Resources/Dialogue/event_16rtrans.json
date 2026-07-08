@@ -2,7 +2,11 @@
     "dialogueEntries": [
         {
             "speaker": "",
-            "text": "You close your eyes, not expecting to sleep easily. Somehow, sleep eventually finds you."
+            "text": "You close your eyes, not expecting to sleep easily. Somehow, sleep eventually finds you.",
+            "hasCondition": true,
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 27
         },
         {
             "speaker": "",

@@ -13,6 +13,11 @@ public class CollisionDialogue : MonoBehaviour
         thisCol = GetComponent<Collider2D>();
     }
 
+    void Update()
+    {
+        dialoguesIndex = GameData.gameStage;
+    }
+
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {

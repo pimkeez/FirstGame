@@ -3,7 +3,11 @@
         {
             "speaker": "",
             "text": "The desks are in pairs. There’s a name next to yours that you don’t recognize.",
-            "portrait": ""
+            "portrait": "",
+            "flag": "testFlag2",
+            "condition": false,
+            "skipId": 16,
+            "hasCondition": true
         },
         {
             "speaker": "Teacher",

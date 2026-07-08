@@ -46,7 +46,7 @@
             "portrait": "C_FakeMomAngry"
         },
         {
-            "speaker": "Dad",
+            "speaker": "Mom",
             "text": "I told you two that one was a bit much.",
             "portrait": "C_FakeMomAngry"
         },
@@ -87,7 +87,7 @@
         },
         {
             "speaker": "Ayla",
-            "text": "I'm not hungry.",
+            "text": "I'm not thirsty.",
             "portrait": "C_AylaCasualTalk1"
         },
         {
@@ -118,7 +118,10 @@
         {
             "speaker": "Ayla",
             "text": "No, stay away!",
-            "portrait": "C_AylaCasualAngry"
+            "portrait": "C_AylaCasualAngry",
+            "flag":"rejectHug",
+            "flagValue": true,
+            "hasFlagValue": true
         },
         {
             "speaker": "Dad",
@@ -162,7 +165,7 @@
             "options": [
                 {
                     "optionText": "Do what she says",
-                    "nextScene": "Bedroom",
+                    "nextScene": "Car",
                     "gameProgressionDialogue": 1
                 },
                 {

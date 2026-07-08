@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {   
@@ -21,7 +22,13 @@ public class DialogueManager : MonoBehaviour
         public string portrait;
         public string nextScene; // for future scene transition implementation
         public string photo; 
-        public Option[] options; 
+
+        public string flag;
+        public bool flagValue;
+        public bool hasFlagValue;
+        public bool condition;
+        public bool hasCondition;
+        public Option[] options;
     }
     
     [Serializable]
@@ -52,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     private GameProgression gameProgressionInstance; 
     private Image objectImage; 
     private Sprite photoSprite; 
+    private static Dictionary<string, bool> flagList; 
     private bool isTyping = false;
     private bool skipTyping = false;
     public float typingSpeed = 0.05f;
@@ -75,6 +83,12 @@ public class DialogueManager : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+        if (GameProgression.flagListGp == null)
+        {
+            GameProgression.flagListGp = new Dictionary<string, bool>();
+        }
+
+        flagList = GameProgression.flagListGp; // reference the flagList from GameProgression
     }
 
     // Update is called once per frame
@@ -112,9 +126,10 @@ public class DialogueManager : MonoBehaviour
         if (dialogueIndex < dialogueDataWrapper.dialogueEntries.Length)
         {
             currentEntry = dialogueDataWrapper.dialogueEntries[dialogueIndex];
+            FlagChange();
+
             if (currentEntry.options != null)
             {
-                GameProgressionDialogueAdvance(); 
                 optionManagerInstance.enabled = true;
                 optionManagerInstance.gameObject.SetActive(true);
                 optionManagerInstance.LoadOptions(currentEntry.options[0], currentEntry.options[1], dialogueIndex);
@@ -132,14 +147,44 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void GameProgressionDialogueAdvance() {
-        for (int i = 0; i < 2; i++) {
-            if (currentEntry.options[i].gameProgressionDialogue != 0) {
-                int a = currentEntry.options[i].gameProgressionDialogue;
-                gameProgressionInstance.SkipDialogueIndex(a); 
-            }
+    public void GameProgressionDialogueAdvance(Option selectedOption) {
+        if (selectedOption.gameProgressionDialogue != 0) {
+            int a = selectedOption.gameProgressionDialogue;
+            gameProgressionInstance.SkipDialogueIndex(a); 
         }
-        
+    }
+
+    void FlagChange() {
+        if (currentEntry == null || string.IsNullOrEmpty(currentEntry.flag) || !currentEntry.hasFlagValue)
+        {
+            Debug.Log("FlagChange: No flag to set.");
+            return;
+        }
+
+        gameProgressionInstance.SetFlag(currentEntry.flag, currentEntry.flagValue);
+
+        Debug.Log($"Flag '{currentEntry.flag}' set to {currentEntry.flagValue}");
+    }
+
+    bool FlagCheck() {
+        if (currentEntry == null || string.IsNullOrEmpty(currentEntry.flag))
+        {
+            Debug.Log("FlagCheck: No flag to check.");
+            return false;
+        }
+
+        if (!flagList.TryGetValue(currentEntry.flag, out bool storedFlag))
+        {
+            Debug.LogWarning($"Flag '{currentEntry.flag}' was not found in the flag list.");
+            return false;
+        }
+
+        if (!currentEntry.hasCondition)
+        {
+            return false;
+        }
+
+        return storedFlag == currentEntry.condition;
     }
 
     public void ShowDialogue()
@@ -149,7 +194,8 @@ public class DialogueManager : MonoBehaviour
 
         if (typingCoroutine != null) {
             StopCoroutine(typingCoroutine);
-         }
+        }
+
         // SET: text (with typing effect)
         if (currentEntry.options != null)
         {
@@ -174,15 +220,23 @@ public class DialogueManager : MonoBehaviour
 
         // increment to the next dialogue entry
         if (currentEntry.skipId == -1) {
-        dialogueIndex++;
-        } else {
-            dialogueIndex = Array.FindIndex(dialogueDataWrapper.dialogueEntries, entry => entry.skipId == currentEntry.skipId) + 1;
-            if (dialogueIndex == 0) {
-                Debug.LogWarning($"Skip ID {currentEntry.skipId} not found. Ending dialogue.");
-                EndDialogue();
-            }
-            // ***PROLLY NEED ADJUSTMENTS LATER... what about options changing the skip id? You should probably have a METHOD for this
+            dialogueIndex++;
+            return;
         }
+
+        if (currentEntry.hasCondition) {
+            if (FlagCheck()) {
+                dialogueIndex++;
+                Debug.Log("Flag condition met, proceeding normally to next dialogue entry.");
+                return;
+            }
+        }
+        else {
+            dialogueIndex = currentEntry.skipId + 1;
+            return;
+        }
+
+        dialogueIndex = currentEntry.skipId + 1;
     }
 
     // literally just OnNext but for options, not sure if this is the best way to do it... but I highk don't wanna deal with parameters for EVERYTHING else that rlly doesnt need it
@@ -192,6 +246,7 @@ public class DialogueManager : MonoBehaviour
         {
             currentEntry = dialogueDataWrapper.dialogueEntries[dialogueIndex + 1]; //ALWAYS when skipping do 1 before index!!! BE CAREFUL WITH THISSSSSS
             this.dialogueIndex = dialogueIndex + 1; 
+            FlagChange();
             ShowDialogue();
         }
         else

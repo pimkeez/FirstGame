@@ -1,0 +1,71 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ella",
+            "portrait": "C_EllaTalk1",
+            "text": "Hey, Ayla! How was the break?"
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualAngry",
+            "text": "Enough of the small talk, Ella. Go ahead and verbally berate me or whatever else you want to do. I'm just trying to get to class."
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "C_EllaSad",
+            "text": "Verbally berate...? Why would I do that?"
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualAngry",
+            "text": "Are you kidding? That's all you do. Find some other kid to pick on."
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "C_EllaSad",
+            "text": "I..."
+        },
+        {
+            "speaker": "Dina",
+            "portrait": "C_DinaSad",
+            "text": "Woah, Ayla, calm down! She never did anything to you, are you okay?"
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualAngry",
+            "text": "Dina, seriously? You aren't innocent either. All you do is gossip and spread rumors."
+        },
+        {
+            "speaker": "Dina",
+            "portrait": "C_DinaSad",
+            "text": "We didn't do that, we swear!"
+        },
+        {
+            "speaker": "Ella",
+            "portrait": "C_EllaSad",
+            "text": "Ayla, I really don't know what you're talking about. But if there's something I did to upset you, we can talk about it."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk1",
+            "text": "You... bothh look dead serious..."
+        },
+        {
+            "speaker": "",
+            "text": "Did whatever's happening to my dad affect Dina and Ella, too?"
+        },
+        {
+            "speaker": "",
+            "text": "The bell rings."
+        },
+        {
+            "speaker": "Ayla",
+            "portrait": "C_AylaCasualTalk1",
+            "text": "Sorry. I have to go. Talk later."
+        },
+        {
+            "speaker": "",
+            "text": "What is going on?"
+        }
+    ]
+}

@@ -11,6 +11,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovementInstance; 
     [SerializeField] private DialogueManager dialogueManagerInstance; 
     [SerializeField] private OptionManager optionManagerInstance; 
+    public static Dictionary<string, bool> flagListGp; 
 
     [Header("[DIALOGUE]")]
     [SerializeField] private int dialoguesIndex;
@@ -24,21 +25,43 @@ public class GameProgression : MonoBehaviour
         if (GameProgressionInstance == null)
         {
             GameProgressionInstance = this;
-
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
+            return;
+        }
+
+        if (flagListGp == null)
+        {
+            flagListGp = new Dictionary<string, bool>();
         }
 
         // audioSourceBGM = GetComponent<AudioSource>();
         // audioSourceSFX = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
+    void Start()
+    {
+        
+    }
+
     public void SkipDialogueIndex(int a)
     {
         dialoguesIndex += a; 
+    }
+
+    public void SetFlag(string flagName, bool value)
+    {
+        if (flagListGp.ContainsKey(flagName))
+        {
+            flagListGp[flagName] = value;
+        }
+        else
+        {
+            flagListGp.Add(flagName, value);
+        }
     }
 
     public void ShowDialogue(TextAsset dialogue)
@@ -75,4 +98,9 @@ public class GameProgression : MonoBehaviour
         Debug.Log("ChangeScene: FadeOut completed");
         
     }
+
+    // **BUG LIST
+    // when you click during transition fade transition fade BREAKS
+    // portraits act up for some reason? I think it has to do with clicking too fast
+    // not a bug but it's very easy to accidentally skip forward very short dialogue. think about if thats what u want
 }

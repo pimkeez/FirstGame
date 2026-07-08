@@ -3,7 +3,11 @@
         {
             "speaker": "Ayla",
             "portrait": "C_AylaCasualTalk",
-            "text": "Oh great..."
+            "text": "Oh great...",
+            "flagValue": "testFlag",
+            "condition": false,
+            "skipId": 5,
+            "hasCondition": true
         },
         {
             "speaker": "Dina",

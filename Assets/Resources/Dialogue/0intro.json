@@ -3,12 +3,27 @@
         {
             "speaker": "Mom",
             "portrait": "RealMomTalk1",
-            "text": "Ayla?"
+            "text": "Ayla?",
+            "flag": "testFlag",
+            "flagValue": false,
+            "hasFlagValue": true
         },
         {
             "speaker": "Mom",
             "portrait": "RealMomTalk2",
-            "text": "Ayla, wake up."
+            "text": "Ayla, wake up.",
+            "flag": "testFlag2",
+            "flagValue": false,
+            "hasFlagValue": true
+        },
+        {
+            "speaker": "Mom",
+            "portrait": "RealMomTalk2",
+            "text": "Ending...",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 9,
+            "hasCondition": true
         },
         {
             "speaker": "Mom",

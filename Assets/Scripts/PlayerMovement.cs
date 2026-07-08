@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private static WaitForSeconds waitForSeconds0_2 = new WaitForSeconds(0.2f);
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 5000f; //it was 5
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private BlackScreenR blackScreenRInstance;
@@ -24,9 +24,12 @@ public class PlayerMovement : MonoBehaviour
     private UnityEngine.Vector3 kitchenPoint;
     private UnityEngine.Vector3 stairwayPoint;
     private UnityEngine.Vector3 carPoint;
+    private UnityEngine.Vector3 schoolClassroom2Point;
+    private UnityEngine.Vector3 bobaShopPoint;
+    private UnityEngine.Vector3 forestPoint;
 
     private UnityEngine.Vector3 offset;
-
+    
     private UnityEngine.Vector2 movement; 
     public bool isLeftFacing = true; 
     public float input; 
@@ -55,11 +58,14 @@ public class PlayerMovement : MonoBehaviour
 
         schoolHallwayDoor = GameObject.Find("SchoolHallwayDoor").transform.position;
         bedroomDoor = GameObject.Find("BedroomDoor").transform.position;
-        schoolClassroomPoint = GameObject.Find("SchoolClassroomPoint").transform.position; 
-        schoolOutsidePoint = GameObject.Find("SchoolOutsidePoint").transform.position; 
-        kitchenPoint = GameObject.Find("KitchenPoint").transform.position; 
-        stairwayPoint = GameObject.Find("StairwayPoint").transform.position;
-        carPoint = GameObject.Find("CarPoint").transform.position;
+        schoolClassroomPoint = GameObject.Find("SchoolClassroom").transform.position; 
+        schoolOutsidePoint = GameObject.Find("SchoolOutside").transform.position; 
+        kitchenPoint = GameObject.Find("Kitchen").transform.position; 
+        stairwayPoint = GameObject.Find("Stairway").transform.position;
+        carPoint = GameObject.Find("Car").transform.position;
+        schoolClassroom2Point = GameObject.Find("SchoolClassroom2").transform.position; 
+        bobaShopPoint = GameObject.Find("BobaShop").transform.position;
+        forestPoint =GameObject.Find("Forest").transform.position;
 
         offset.x = 10; 
     }
@@ -74,10 +80,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameProgression.currentScene!="SchoolClassroom" || GameProgression.currentScene!="SchoolOutsidePoint") {
+        if (GameProgression.currentScene!="SchoolClassroom" || GameProgression.currentScene!="SchoolOutside") {
         if (!GameData.dialogueActive && !GameData.dialogueOptionActive) {
             input = Input.GetAxisRaw("Horizontal");
-            movement.x = input * speed * Time.deltaTime; 
+            movement.x = input * speed * Time.deltaTime; //temp
             transform.Translate(movement);
             if (input != 0)
             {
@@ -157,6 +163,21 @@ public class PlayerMovement : MonoBehaviour
         if (locationName == "Car")
         {
             _transform.position = carPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "SchoolClassroom2")
+        {
+            _transform.position = schoolClassroom2Point;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "BobaShop")
+        {
+            _transform.position = bobaShopPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "Forest")
+        {
+            _transform.position = forestPoint;
             GameProgressionInstance.DialoguePrompt();
         }
         AnimationChange();

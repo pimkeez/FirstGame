@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private RuntimeAnimatorController originalController;
     private AnimatorOverrideController casualOverride;
     private AnimationClip casualIdol;
+    private AnimationClip casualTransTo;
     private AnimationClip casualWalk;
+    private AnimationClip casualWalk2;
+    private AnimationClip casualTransFrom;
 
     private UnityEngine.Vector3 schoolHallwayDoor; 
     private UnityEngine.Vector3 bedroomDoor; 
@@ -46,14 +49,20 @@ public class PlayerMovement : MonoBehaviour
         _transform = transform;
         GameProgressionInstance = Object.FindFirstObjectByType<GameProgression>();
         casualIdol = Resources.Load<AnimationClip>("Animation/_CasualPlayerIdol");
+        casualTransTo = Resources.Load<AnimationClip>("Animation/_CasualPlayerTransTo");
         casualWalk = Resources.Load<AnimationClip>("Animation/_CasualPlayerWalk");
+        casualWalk2 = Resources.Load<AnimationClip>("Animation/_CasualPlayerWalk2");
+        casualTransFrom = Resources.Load<AnimationClip>("Animation/_CasualPlayerTransFrom");
         originalController = _animator != null ? _animator.runtimeAnimatorController : null;
         if (originalController != null && casualIdol != null && casualWalk != null)
         {   
             Debug.Log("Creating animator override controller for casual animations");
             casualOverride = new AnimatorOverrideController(originalController);
             casualOverride["_PJplayerIdol"] = casualIdol; // replace "Idle" with the original clip name from your controller
+            casualOverride["_PJplayerTransTo"] = casualTransTo;
             casualOverride["_PJplayerWalk"] = casualWalk; // replace "Walk" with the original clip name from your controller
+            casualOverride["_PJplayerWalk2"] = casualWalk2;
+            casualOverride["_PJplayerTransFrom"] = casualTransFrom;
         }
 
         schoolHallwayDoor = GameObject.Find("SchoolHallwayDoor").transform.position;

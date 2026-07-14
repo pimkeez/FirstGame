@@ -101,6 +101,8 @@ public class GameProgression : MonoBehaviour
 
     // **BUG LIST
     // when you click during transition fade transition fade BREAKS
-    // portraits act up for some reason? I think it has to do with clicking too fast
+    // portraits act up for some reason? I think it has to do with clicking too fast- happened on "grief" in forest++
     // not a bug but it's very easy to accidentally skip forward very short dialogue. think about if thats what u want
+    // on he's staring intently eventforest... options ran the char again? idk why
+    // *ella and dina portraits on schoolHall2 dont show 
 }

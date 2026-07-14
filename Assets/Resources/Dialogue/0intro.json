@@ -5,7 +5,7 @@
             "portrait": "RealMomTalk1",
             "text": "Ayla?",
             "flag": "testFlag",
-            "flagValue": false,
+            "flagValue": true,
             "hasFlagValue": true
         },
         {
@@ -13,7 +13,7 @@
             "portrait": "RealMomTalk2",
             "text": "Ayla, wake up.",
             "flag": "testFlag2",
-            "flagValue": false,
+            "flagValue": true,
             "hasFlagValue": true
         },
         {

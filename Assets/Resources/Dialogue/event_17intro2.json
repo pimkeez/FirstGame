@@ -57,6 +57,12 @@
             "speaker": "Ayla",
             "text": "What the hell is going on...",
             "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What the hell is going on...",
+            "portrait": "AylaPJTalk1",
+            "nextScene": "Kitchen"
         }
     ]
 }

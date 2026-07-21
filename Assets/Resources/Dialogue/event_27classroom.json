@@ -2,7 +2,11 @@
     "dialogueEntries": [
         {
             "speaker": "",
-            "text": "That's different. The person next to you is actually here."
+            "text": "That's different. The person next to you is actually here.",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 25,
+            "hasCondition": true
         },
         {
             "speaker": "",

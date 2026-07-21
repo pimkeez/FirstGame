@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class Camera : MonoBehaviour
     private static GameObject otherObj;
     private float input;
     private Transform playerTransform;
+    private bool yChange = false;
     
    
     void Awake()
@@ -21,6 +23,11 @@ public class Camera : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (GameProgression.currentScene == "Parallax" && !yChange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 22f, transform.position.z);
+            yChange = true; 
+        }
         Vector3 delta = Vector3.zero;
 
         float deltaX = playerTransform.position.x - transform.position.x;

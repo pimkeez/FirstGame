@@ -3,12 +3,422 @@
         {
             "speaker": "",
             "text": "It's your dad who picks you up... you don't know if you're terrified or excited to see him...",
-            "portrait": "C_DadSad"
+            "flag": "testFlag",
+            "condition": true,
+            "skipId": 68,
+            "hasCondition": true
         },
         {
             "speaker": "Dad",
             "text": "Sorry, bunny. Your mom would’ve picked you up but she got called away for something real quick.",
             "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "How was your first day?",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "It... was nice, actually...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Great! Glad to hear.",
+            "portrait": "C_DadTalk2",
+            "hasCondition": true,
+            "flag": "bobaShop",
+            "condition": false,
+            "skipId": 16
+        },
+        {
+            "speaker": "Dad",
+            "text": "So... I saw that guy when I picked you up. What's the deal between you two? Is there something I should know?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "What? No. I just met him today. We're friends.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Today? That's a quick turnaround. Don't you think you should get to know him better before hanging out alone?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Probably, but he's really nice... and we didn't do anything, I swear.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "First off, even if you did, I wouldn't have a problem with it. High school's time to experiment.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You know, learning things about relationships while things are less serious is important! Just make sure to do it safely-",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Dad. Stop. Talking. We're not dating!",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I know, I know...",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I know, I know...",
+            "portrait": "C_DadTalk2"
+        },
+        {
+            "speaker": "Dad",
+            "text": "So, are you going to Homecoming dance with him, or...?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Dad!",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Ok, ok! I'll stop!",
+            "portrait": "C_DadTalk1",
+            "skipId": 18
+        },
+        {
+            "speaker": "Dad",
+            "text": "Nice to see you keeping in touch with Ella and Dina, even after all these years.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah... I suppose...",
+            "portrait": "C_AylaCasualAngry"
+        },
+        {
+            "speaker": "",
+            "text": "As you enter the highway, your heart starts to pick up speed..."
+        },
+        {
+            "speaker": "",
+            "text": "You don't know why exactly.",
+            "hasCondition": true,
+            "flagValue": "rejectHug",
+            "condition": true,
+            "skipId": 23
+        },
+        {
+            "speaker": "Dad",
+            "text": "I wanted to ask, what was that about this morning? I've never seen you angry like that.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I wanted to ask, what was that about this morning? I've never seen you angry like that.",
+            "portrait": "C_DadSad",
+            "options": [
+                {
+                    "optionText": "I'm fine"
+                },
+                {
+                    "optionText": "Inquire",
+                    "nextDialogueIndex": 27
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I really am fine. Sorry for lashing out at you, I didn't mean to.",
+            "portrait": "C_AylaCasualTalk1",
+            "skipId": 26
+        },
+        {
+            "speaker": "Dad",
+            "text": "I wanted to ask, are you sure you feel better from this morning? You were acting strange for awhile, there.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I wanted to ask, are you sure you feel better from this morning? You were acting strange for awhile, there.",
+            "portrait": "C_DadSad",
+            "options": [
+                {
+                    "optionText": "I'm fine"
+                },
+                {
+                    "optionText": "Inquire",
+                    "nextDialogueIndex": 27
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I really am fine. We don't have to dwell on it.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "If you're sure... just know that if we ever do something wrong, you can talk to us about it.",
+            "portrait": "C_DadSad",
+            "skipId": 49
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Can I ask... are you real?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I sure feel real... you asked me this same question this morning. I'm right here, bunny. aren't I?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "At this point... I don't know what to believe. Sorry.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "How about this... since today, reality seems to be slipping for you, how about I prove my realness?",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "How?",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Well... would a fake dad know how you used to run away when I tried to do your hair?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You would cry and beg your mom to do it, instead.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Or the Spelling Bee in 5th grade, where we spent nights and nights practicing.",
+            "portrait": "C_DadTalk2"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You got every word right in practice. I knew you had it in you to win... but stage fright got to you.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You were so sad that you lost, but you didn't seem to care much after I got you frozen yogurt.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Dad",
+            "text": "And of course, there's the Bunny and the Big Mountain. That was always your favorite book.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "And of course, there's the Bunny and the Big Mountain. That was always your favorite book.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Do you believe me, now?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Do you believe me, now?",
+            "portrait": "C_DadTalk3",
+            "options": [
+                {
+                    "optionText": "Believe him",
+                    "nextDialogueIndex": 66
+                },
+                {
+                    "optionText": "Question again"
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You seem real, but...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "DAD!",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "What? Bunny, you're hyperventilating. Take deep breaths with me, okay?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "That's it. That's better. What did you see?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "We- we were in this car... you-",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "It's okay, none of it was real, you hear me? I'm right here.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Let's get you to bed. I'll make your favorite tea.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Let's get you to bed. I'll make your favorite tea.",
+            "portrait": "C_DadSad",
+            "nextScene": "InBed"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I do have a small question.",
+            "portrait": "C_AylaCasualTalk",
+            "hasCondition": true,
+            "flag": "sketchbook",
+            "condition": true,
+            "skipId": 60
+        },
+        {
+            "speaker": "Dad",
+            "text": "What is it?",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "What is it?",
+            "portrait": "C_DadTalk1",
+            "options": [
+                {
+                    "optionText": "Ask where Mom is",
+                    "nextDialogueIndex": 60
+                },
+                {
+                    "optionText": "Ask about the sketchbook"
+                }
+            ]
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Did you draw something in my sketchbook? There's a sketch in there I don't recognize.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "No, I didn't touch it. I have my own canvases, bunny. Plus, I forget what I draw half the time, too.",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I guess so...",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I'm glad you're still drawing and playing music. And you're amazing at both.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "I'm happy to see both your mom and I inspired you to take this path.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Have you looked into art and music programs? I've heard there's an arts school that just opened up. You could go every other day.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "That... sounds nice...",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "And thank you, I'll have to do more research on it.",
+            "portrait": "C_AylaCasualTalk1",
+            "skipId": 68
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Where did Mom go? You told me she got called away for something.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Her bandmate called her. Something about 'sudden inspiration.' You know how it is.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Oh right, she wanted me to let you know something.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "If you ever want to make your own music, she told me her bandmates already knew a lot about you, and to reach out.",
+            "portrait": "C_DadTalk2"
+        },
+        {
+            "speaker": "Dad",
+            "text": "You could learn a lot from them, you know?",
+            "portrait": "C_DadTalk3"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Right, thanks.",
+            "portrait": "C_AylaCasualTalk1",
+            "skipId": 68
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Yeah, you're right. I don't know what I was thinking.",
+            "portrait": "C_AylaCasualTalk"
+        },
+        {
+            "speaker": "",
+            "text": "He's real enough to you, and isn't that all that matters?"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Alright, you know what? I'll make you your favorite tea tonight.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Thanks, dad. I love you.",
+            "portrait": "C_AylaCasualTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Love you too, bunny.",
+            "portrait": "C_DadTalk1"
+        },
+        {
+            "speaker": "Dad",
+            "text": "Love you too, bunny.",
+            "portrait": "C_DadTalk1",
+            "nextScene": "InBed"
         }
     ]
 }

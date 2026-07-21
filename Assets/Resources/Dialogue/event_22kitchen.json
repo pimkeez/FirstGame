@@ -3,7 +3,11 @@
         {
             "speaker": "Dad",
             "text": "There you are!",
-            "portrait": "C_DadTalk1"
+            "portrait": "C_DadTalk1",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 17,
+            "hasCondition": true
         },
         {
             "speaker": "Dad",

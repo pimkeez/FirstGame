@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private static WaitForSeconds waitForSeconds0_2 = new WaitForSeconds(0.2f);
-    [SerializeField] private float speed = 5000f; //it was 5
+    [SerializeField] private float speed = 5f; //it was 5
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private BlackScreenR blackScreenRInstance;
@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private UnityEngine.Vector3 schoolClassroom2Point;
     private UnityEngine.Vector3 bobaShopPoint;
     private UnityEngine.Vector3 forestPoint;
+    private UnityEngine.Vector3 inBedPoint;
+    private UnityEngine.Vector3 parallaxDoor; 
 
     private UnityEngine.Vector3 offset;
     
@@ -75,8 +77,11 @@ public class PlayerMovement : MonoBehaviour
         schoolClassroom2Point = GameObject.Find("SchoolClassroom2").transform.position; 
         bobaShopPoint = GameObject.Find("BobaShop").transform.position;
         forestPoint =GameObject.Find("Forest").transform.position;
+        inBedPoint = GameObject.Find("InBed").transform.position;
+        parallaxDoor = GameObject.Find("ParallaxDoor").transform.position;
 
         offset.x = 10; 
+        _animator.SetBool("isRunning", false);
     }
     
 
@@ -159,6 +164,11 @@ public class PlayerMovement : MonoBehaviour
             blackScreenRInstance.gameObject.SetActive(true);
             GameProgressionInstance.DialoguePrompt();
         }
+        if (locationName == "InBed")
+        {
+            _transform.position = inBedPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
         if (locationName == "Kitchen")
         {
             _transform.position = kitchenPoint;
@@ -187,6 +197,12 @@ public class PlayerMovement : MonoBehaviour
         if (locationName == "Forest")
         {
             _transform.position = forestPoint;
+            GameProgressionInstance.DialoguePrompt();
+        }
+        if (locationName == "Parallax")
+        {
+            UnityEngine.Vector3 parallaxOffset = new UnityEngine.Vector3(0f,0f,0f);
+            _transform.position = parallaxDoor - offset - parallaxOffset; 
             GameProgressionInstance.DialoguePrompt();
         }
         AnimationChange();

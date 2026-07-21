@@ -1,0 +1,20 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "Ayla",
+            "text": "Is that... a guitar in the distance..?",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This song is familiar... I need to investigate.",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "This song is familiar... I need to investigate.",
+            "portrait": "AylaPJTalk1",
+            "nextScene": "Parallax"
+        }
+    ]
+}

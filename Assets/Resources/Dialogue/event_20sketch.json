@@ -6,7 +6,10 @@
         },
         {
             "speaker": "",
-            "text": "It's a lot more full. Some of these artworks you don't even remember making, yet it's your art style."
+            "text": "It's a lot more full. Some of these artworks you don't even remember making, yet it's your art style.",
+            "hasFlagValue": true,
+            "flag": "sketchbook",
+            "flagValue": true
         },
         {
             "speaker": "Ayla",

@@ -1,0 +1,66 @@
+{
+    "dialogueEntries": [
+        {
+            "speaker": "",
+            "text": "You stare at the ceiling... you have no idea what to make of this day..."
+        },
+        {
+            "speaker": "Mom",
+            "text": "Hey honey, are you feeling alright?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Dad",
+            "text": "We wanted to check in and see if you were feeling alright.",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "I'm feeling okay...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Do you need anything from us?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "Actually... can you sing me our song?",
+            "portrait": "AylaPJTalk1"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Well, which one is that?",
+            "portrait": "C_FakeMomSad"
+        },
+        {
+            "speaker": "Ayla",
+            "text": "You don't know what I mean? It's... nevermind, actually...",
+            "portrait": "AylaPJTalk"
+        },
+        {
+            "speaker": "Dad",
+            "text": "We're just a call away, okay?",
+            "portrait": "C_DadSad"
+        },
+        {
+            "speaker": "Mom",
+            "text": "Everything will be fine, tomorrow. I promise.",
+            "portrait": "C_FakeMomTalk3"
+        },
+        {
+            "speaker": "",
+            "text": "They leave. Today has left you feeling so exhausted...."
+        },
+        {
+            "speaker": "",
+            "text": "You drift off into sleep..."
+        },
+        {
+            "speaker": "",
+            "text": "You drift off into sleep...",
+            "nextScene": "Bedroom"
+        }
+    ]
+}

@@ -2,8 +2,12 @@
     "dialogueEntries": [
         {
             "speaker": "Ella",
-            "portrait": "C_EllaTalk1",
-            "text": "Hey, Ayla! How was the break?"
+            "portrait": "EllaTalk1",
+            "text": "Hey, Ayla! How was the break?",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 12,
+            "hasCondition": true
         },
         {
             "speaker": "Ayla",
@@ -12,7 +16,7 @@
         },
         {
             "speaker": "Ella",
-            "portrait": "C_EllaSad",
+            "portrait": "EllaSad",
             "text": "Verbally berate...? Why would I do that?"
         },
         {
@@ -22,12 +26,12 @@
         },
         {
             "speaker": "Ella",
-            "portrait": "C_EllaSad",
+            "portrait": "EllaSad",
             "text": "I..."
         },
         {
             "speaker": "Dina",
-            "portrait": "C_DinaSad",
+            "portrait": "DinaSad",
             "text": "Woah, Ayla, calm down! She never did anything to you, are you okay?"
         },
         {
@@ -37,12 +41,12 @@
         },
         {
             "speaker": "Dina",
-            "portrait": "C_DinaSad",
+            "portrait": "DinaSad",
             "text": "We didn't do that, we swear!"
         },
         {
             "speaker": "Ella",
-            "portrait": "C_EllaSad",
+            "portrait": "EllaSad",
             "text": "Ayla, I really don't know what you're talking about. But if there's something I did to upset you, we can talk about it."
         },
         {

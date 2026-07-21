@@ -65,7 +65,7 @@
                 },
                 {
                     "optionText": "Don't tell them",
-                    "nextDialogueIndex": 39,
+                    "nextDialogueIndex": 38,
                     "gameProgressionDialogue": 1
                 }
             ]
@@ -103,7 +103,7 @@
                 },
                 {
                     "optionText": "Give up",
-                    "nextDialogueIndex": 39
+                    "nextDialogueIndex": 38
                 }
             ]
         },
@@ -137,7 +137,7 @@
                 },
                 {
                     "optionText": "Give up",
-                    "nextDialogueIndex": 39
+                    "nextDialogueIndex": 38
                 }
             ]
         },
@@ -186,7 +186,7 @@
                 },
                 {
                     "optionText": "Give up",
-                    "nextDialogueIndex": 39
+                    "nextDialogueIndex": 38
                 }
             ]
         },
@@ -210,14 +210,17 @@
                 },
                 {
                     "optionText": "Give up",
-                    "nextDialogueIndex": 39
+                    "nextDialogueIndex": 38
                 }
             ]
         },
         {
             "speaker": "Ayla",
             "text": "I can't do that until you give me answers. What do you mean?",
-            "portrait": "C_AylaCasualAngry"
+            "portrait": "C_AylaCasualAngry",
+            "flag": "limitPushed",
+            "flagValue": true,
+            "hasFlagValue": true
         },
         {
             "speaker": "Ella",
@@ -242,7 +245,11 @@
         {
             "speaker": "Ella",
             "text": "So, what are you planning to do for Homecoming?",
-            "portrait": "EllaTalk1"
+            "portrait": "EllaTalk1",
+            "flag": "limitPushed",
+            "condition": true,
+            "skipId": 41,
+            "hasCondition": true
         },
         {
             "speaker": "Ayla",

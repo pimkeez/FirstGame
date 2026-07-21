@@ -2,7 +2,11 @@
     "dialogueEntries": [
         {
             "speaker": "",
-            "text": "Mom decided to take me to school today."
+            "text": "Mom decided to take me to school today.",
+            "flag": "testFlag",
+            "condition": false,
+            "skipId": 52,
+            "hasCondition": true
         },
         {
             "speaker": "",

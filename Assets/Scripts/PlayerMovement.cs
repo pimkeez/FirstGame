@@ -36,8 +36,12 @@ public class PlayerMovement : MonoBehaviour
     private UnityEngine.Vector3 offset;
     
     private UnityEngine.Vector2 movement; 
+    private Color currentTint;
     public bool isLeftFacing = true; 
     public float input; 
+
+    private float stepInterval = 1f;
+    private float stepTimer = 0f; 
 
 
     void Awake()
@@ -82,13 +86,14 @@ public class PlayerMovement : MonoBehaviour
 
         offset.x = 10; 
         _animator.SetBool("isRunning", false);
+
     }
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ChangeSceneTint(); 
     }
 
     // Update is called once per frame
@@ -102,8 +107,18 @@ public class PlayerMovement : MonoBehaviour
             if (input != 0)
             {
                 _animator.SetBool("isRunning", true); 
+                stepTimer -= Time.deltaTime;
+
+                if (stepTimer <= 0f)
+                {
+                    AudioManager.audioManagerInstance.PlayWalkSound();
+                    stepTimer = stepInterval; // Reset the timer
+                }
             }
-            else {_animator.SetBool("isRunning", false);}
+            else {
+                _animator.SetBool("isRunning", false);
+                stepTimer = stepInterval; 
+                }
             if (input <= 0)
             {
                 isLeftFacing = true;
@@ -119,6 +134,14 @@ public class PlayerMovement : MonoBehaviour
             _animator.SetBool("isRunning", false);
         }
         }
+    }
+
+    void ChangeSceneTint()
+    {
+        if (!DialogueManager.colorTint.TryGetValue(GameProgression.currentScene, out currentTint)) {
+            currentTint = Color.white;
+        }
+        _spriteRenderer.color = currentTint; 
     }
 
     // SceneMovement for walking into door
@@ -205,6 +228,7 @@ public class PlayerMovement : MonoBehaviour
             _transform.position = parallaxDoor - offset - parallaxOffset; 
             GameProgressionInstance.DialoguePrompt();
         }
+        ChangeSceneTint(); 
         AnimationChange();
     }
 

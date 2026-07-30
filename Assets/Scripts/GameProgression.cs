@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GameProgression : MonoBehaviour
 {
     public static GameProgression GameProgressionInstance;
-    public static string currentScene;
+    public static string currentScene = "Bedroom";
     public DialogueManager dialogueManager; 
     [SerializeField] private BlackScreen blackScreenInstance; 
     [SerializeField] private PlayerMovement playerMovementInstance; 

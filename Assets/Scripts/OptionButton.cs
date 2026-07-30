@@ -11,6 +11,7 @@ public class OptionButton : MonoBehaviour
 
     public void Interact()
     {
+        AudioManager.audioManagerInstance.PlayButtonSound(); 
         optionManagerInstance.InteractOption(this);
     }
 

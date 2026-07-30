@@ -5,8 +5,8 @@
             "text": "You close your eyes, not expecting to sleep easily. Somehow, sleep eventually finds you.",
             "hasCondition": true,
             "flag": "testFlag",
-            "condition": false,
-            "skipId": 27
+            "condition": true,
+            "skipId": 26
         },
         {
             "speaker": "",
@@ -99,11 +99,8 @@
         },
         {
             "speaker": "",
-            "text": "..."
-        },
-        {
-            "speaker": "",
-            "text": "You hear birds chirping."
+            "text": "...",
+            "audio": "birdChirp"
         },
         {
             "speaker": "",

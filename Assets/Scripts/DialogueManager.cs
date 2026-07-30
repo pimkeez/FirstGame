@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {   
@@ -28,6 +29,7 @@ public class DialogueManager : MonoBehaviour
         public bool hasFlagValue;
         public bool condition;
         public bool hasCondition;
+        public string audio; 
         public Option[] options;
     }
     
@@ -45,11 +47,9 @@ public class DialogueManager : MonoBehaviour
     }; // for future dialogue options implementation
 
     public DialogueDataWrapper dialogueDataWrapper;
-    public AudioClip typeSound; 
 
     public DialogueEntry currentEntry;
     private int dialogueIndex = 0;
-    public AudioSource audioSource;
 
     private TextMeshProUGUI dialogueTMP; 
     private TextMeshProUGUI speakerTMP;
@@ -60,12 +60,29 @@ public class DialogueManager : MonoBehaviour
     private Image objectImage; 
     private Sprite photoSprite; 
     private static Dictionary<string, bool> flagList; 
+    public static Dictionary<string, Color> colorTint; 
     private bool isTyping = false;
     private bool skipTyping = false;
     public float typingSpeed = 0.05f;
 
     void Awake()
     {
+        colorTint = new Dictionary<string, Color>();
+
+        Color bedroomColor = new Color(0.8117251f, 0.7603773f, 1f, 1f); colorTint.Add("Bedroom", bedroomColor);
+        Color schoolHallwayColor = new Color(0.8943396f, 0.7992896f, 0.720534f, 1f); colorTint.Add("SchoolHallway", schoolHallwayColor);
+        Color schoolClassroomColor = new Color(0.9245283f, 0.8658025f, 0.8285867f, 1f); colorTint.Add("SchoolClassroom", schoolClassroomColor); 
+        Color schoolOutsideColor = new Color(0.8943396f, 0.745739f, 0.6597863f, 1f); colorTint.Add("SchoolOutside", schoolOutsideColor);
+        Color kitchenColor = new Color(0.9169811f, 0.811456f, 0.6972516f, 1f); colorTint.Add("Kitchen", kitchenColor);
+        Color stairwayColor = new Color(0.8867924f, 0.6676041f, 0.7435741f, 1f); colorTint.Add("Stairway", stairwayColor); 
+        Color carColor = new Color (0.9245283f, 0.8629522f, 0.7657886f, 1f); colorTint.Add("Car", carColor);
+        Color schoolClassroomColor2 = new Color(0.9245283f, 0.8658025f, 0.8285867f, 1f); colorTint.Add("SchoolClassroom2", schoolClassroomColor2);
+        Color bobaShopColor = new Color(0.8117251f, 0.7603773f, 1f, 1f); colorTint.Add("BobaShop", bobaShopColor); 
+        Color forestColor = new Color(0.9471698f, 0.831166f, 0.6987611f, 1f); colorTint.Add("Forest", forestColor);
+        Color inBedColor = new Color(0.8117251f, 0.7603773f, 1f, 1f); colorTint.Add("InBed", inBedColor);
+        Color parallaxColor = new Color(0.4974083f, 0.5712773f, 0.8264151f, 1f); colorTint.Add("Parallax", parallaxColor);
+
+
         speakerTMP = GameObject.Find("Canvas/DialogueBox/SpeakerText").GetComponent<TextMeshProUGUI>();
         dialogueTMP = GameObject.Find("Canvas/DialogueBox/DialogueText").GetComponentInChildren<TextMeshProUGUI>();
         portraitImage = GameObject.Find("Canvas/DialogueBox/PortraitImage").GetComponent<Image>();
@@ -79,10 +96,6 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
         if (GameProgression.flagListGp == null)
         {
             GameProgression.flagListGp = new Dictionary<string, bool>();
@@ -127,6 +140,10 @@ public class DialogueManager : MonoBehaviour
         {
             currentEntry = dialogueDataWrapper.dialogueEntries[dialogueIndex];
             FlagChange();
+            if (!String.IsNullOrEmpty(currentEntry.audio))
+            {
+                LoadAudio(); 
+            }
 
             if (currentEntry.options != null)
             {
@@ -145,6 +162,7 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
         }
+        AudioManager.audioManagerInstance.PlayButtonSound();
     }
 
     public void GameProgressionDialogueAdvance(Option selectedOption) {
@@ -269,7 +287,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
             dialogueTMP.text += letter;
-            // audioSource.PlayOneShot(typeSound); WHEN YOU ADD AUDIO 
+            AudioManager.audioManagerInstance.PlayDialogueBlip();
             yield return new WaitForSeconds(typingSpeed);
         }
         isTyping = false;
@@ -322,16 +340,29 @@ public class DialogueManager : MonoBehaviour
         objectImage.color = new Color(1f, 1f, 1f, photo == null ? 0f : 1f);
     }
 
+    Color GetSceneTint()
+    {
+        Color currentTint;
+        if (!colorTint.TryGetValue(GameProgression.currentScene, out currentTint)) {
+            currentTint = Color.white;
+        }
+        return currentTint;
+    }
 
     IEnumerator FadePortrait(Sprite newPortrait, float duration)
     {
+        Color currentTint; 
         if (portraitImage == null)
             yield break;
-
+        
+        else
+        {
+            currentTint = GetSceneTint(); 
+        }
         if (portraitImage.sprite == newPortrait)
         {
             portraitImage.sprite = newPortrait;
-            portraitImage.color = new Color(1f, 1f, 1f, newPortrait == null ? 0f : 1f);
+            portraitImage.color = new Color(currentTint.r, currentTint.g, currentTint.b, newPortrait == null ? 0f : 1f);
             yield break;
         }
 
@@ -341,13 +372,13 @@ public class DialogueManager : MonoBehaviour
             while (elapsed < duration)
             {
                 float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
-                portraitImage.color = new Color(1f, 1f, 1f, alpha);
+                portraitImage.color = new Color(currentTint.r, currentTint.g, currentTint.b, alpha);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
         }
 
-        portraitImage.color = new Color(1f, 1f, 1f, 0f);
+        portraitImage.color = new Color(currentTint.r, currentTint.g, currentTint.b, 0f);
         portraitImage.sprite = newPortrait;
         elapsed = 0f;
 
@@ -356,18 +387,24 @@ public class DialogueManager : MonoBehaviour
             while (elapsed < duration)
             {
                 float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
-                portraitImage.color = new Color(1f, 1f, 1f, alpha);
+                portraitImage.color = new Color(currentTint.r, currentTint.g, currentTint.b, alpha);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
         }
 
-        portraitImage.color = new Color(1f, 1f, 1f, newPortrait == null ? 0f : 1f);
+        portraitImage.color = new Color(currentTint.r, currentTint.g, currentTint.b, newPortrait == null ? 0f : 1f);
     }
 
     public void StartDialogue() 
     {
         GameData.dialogueActive = true;
+    }
+
+    void LoadAudio()
+    {
+        AudioClip currentAudio = Resources.Load<AudioClip>($"Audio/{currentEntry.audio}");
+        AudioManager.audioManagerInstance.dialogueCuedAudio(currentAudio); 
     }
 
     void LoadPortrait()

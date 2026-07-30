@@ -12,7 +12,8 @@
         {
             "speaker": "Ayla",
             "text": "Hey mom-",
-            "portrait": "AylaPJTalk1"
+            "portrait": "AylaPJTalk1",
+            "audio": "doorOpen"
         },
         {
             "speaker": "Dad",
@@ -51,7 +52,8 @@
         },
         {
             "speaker": "",
-            "text": "He shuts the door."
+            "text": "He shuts the door.",
+            "audio": "doorClose"
         },
         {
             "speaker": "Ayla",
